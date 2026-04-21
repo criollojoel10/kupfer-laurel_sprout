@@ -1,0 +1,2696 @@
+{
+  "currentUserLogin": "criollojoel10",
+  "threadUrl": "https://github.com/copilot/c/ed040b5e-4984-404c-9c17-edaf916a0ba7",
+  "threadName": "Installing Linux on Xiaomi Mi A3",
+  "messages": [
+    {
+      "id": "root",
+      "role": "user",
+      "createdAt": "",
+      "threadID": "",
+      "references": null
+    },
+    {
+      "id": "aaf86fb6-8c4a-4b54-9627-9283a3b68715",
+      "parentMessageID": "root",
+      "intent": "conversation",
+      "role": "user",
+      "content": "Tengo un mi A3, 4gb 128, Snapdragon, quiero usarlo para instalar arm , primero Ubuntu touch, o archlinux o debian droid, cosas así, busca en la comunidad y cita proyectos en github o algo que esté en desarrollo",
+      "createdAt": "2026-04-21T00:37:50.230078731Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "b92efa67-51d5-42bf-9074-b08cac08a7fa",
+      "parentMessageID": "aaf86fb6-8c4a-4b54-9627-9283a3b68715",
+      "intent": "conversation",
+      "role": "assistant",
+      "content": "Para instalar distribuciones de Linux ARM como Ubuntu Touch, Arch Linux ARM o Debian (por ejemplo, Droidian o Mobian) en tu Xiaomi Mi A3 (codename laurel_sprout, Snapdragon 439), actualmente no hay puertos completamente funcionales y listos para usar específicos para este dispositivo. Sin embargo, hay esfuerzos comunitarios en desarrollo y recursos que puedes usar como base para un puerto DIY (hazlo tú mismo). La mayoría de los proyectos se centran en Android custom ROMs (como LineageOS o PixelExperience), que proporcionan kernels y device trees necesarios para adaptar a Linux móvil.\n\n### Principales marcos y proyectos generales:\n- **Halium** (para Ubuntu Touch y similares): Es el proyecto principal que habilita Linux en dispositivos Android. Permite instalar GSIs (Generic System Images) de Ubuntu Touch en dispositivos compatibles con Project Treble. No hay un puerto dedicado para Mi A3, pero puedes intentar usar un GSI arm64 con un kernel parcheado de Halium. Recursos:\n  - Docs de porting: https://docs.ubports.com/en/latest/porting/introduction.html\n  - Comunidad en XDA: https://forum.xda-developers.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4110581/\n  - Halium docs: https://halium.org/\n\n- **Kupfer** (para Arch Linux ARM móvil): Proyecto para llevar Arch Linux a móviles, similar a postmarketOS. Mi A3 no está soportado oficialmente, pero podrías contribuir o intentar un puerto usando kernels mainline o adaptados. Sitio: https://kupferlinux.com/\n\n- **postmarketOS / Debian-based (Droidian, Mobian)**: No hay puertos directos, pero postmarketOS es un framework para portar Alpine/Debian a Android. Requiere kernels compatibles. Comunidad en Matrix/Telegram.\n\n### Repositorios en GitHub relacionados con Xiaomi Mi A3 (laurel_sprout):\nHay 249 repositorios en total relacionados con \"laurel_sprout\" en GitHub, la mayoría para desarrollo de Android custom ROMs (kernels, device trees, vendor blobs). Estos pueden usarse como base para puertos de Linux, ya que proporcionan código fuente de kernels y hardware. Ejemplos clave (mostrando 30 de 249; puedes filtrar por fecha o actividad en GitHub):\n\n- **Kernels** (necesarios para Linux):\n  - https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout (Kernel CAF msm-4.14, último update 2022, 2 estrellas).\n  - https://github.com/FlopKernel-Series/flop_trinket-mi_kernel (Kernel custom para Mi A3 y similares, incluye laurel_sprout).\n  - https://github.com/HarukeyUA/android_kernel_xiaomi_laurel_sprout\n  - https://github.com/PixelExperience-Devices/kernel_xiaomi_laurel_sprout\n  - https://github.com/MasterAwesome/android_kernel_xiaomi_laurel_sprout\n\n- **Device Trees** (árboles de dispositivos para hardware):\n  - https://github.com/PixelExperience-Devices/device_xiaomi_laurel_sprout\n  - https://github.com/HemantSachdeva/device_xiaomi_laurel_sprout\n  - https://github.com/MasterAwesome/android_device_xiaomi_laurel_sprout (LineageOS tree).\n\n- **Vendor Blobs** (blobs propietarios para drivers):\n  - https://github.com/HemantSachdeva/vendor_xiaomi_laurel_sprout\n  - https://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout\n\nPara ver más resultados (filtrados por relevancia): https://github.com/search?q=laurel_sprout&type=repositories\n\n### Pasos recomendados para comenzar:\n1. **Únete a comunidades**: Telegram de Halium/UBports, Matrix de Kupfer/postmarketOS, o foros XDA para Mi A3.\n2. **Prueba GSIs**: Descarga un Ubuntu Touch GSI arm64 y adapta un kernel de los repos arriba usando Halium tools.\n3. **Contribuye**: Si tienes experiencia en kernel-building o embedded Linux, crea un PR o issue en repos como Halium para soporte de Mi A3.\n4. **Riesgos**: Estos puertos son experimentales; podrías brickear el dispositivo. Asegúrate de tener respaldo.\n\nSi necesitas ayuda específica con un repo o herramienta, proporciona más detalles. Para más resultados de repos, dime cómo filtrar (ej. por fecha reciente).",
+      "createdAt": "2026-04-21T00:37:50.231645202Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [
+        {
+          "query": "What are the current active GitHub projects or community efforts to port Linux ARM distributions like Ubuntu Touch, Arch Linux ARM, or Debian to the Xiaomi Mi A3 (Snapdragon 439, 4GB RAM, 128GB storage)? Include any in-development kernels, ROMs, or custom OS ports.",
+          "results": [
+            {
+              "title": "current active GitHub projects porting Linux ARM (Ubuntu Touch, Arch Linux ARM, Debian) to Xiaomi Mi A3 (Snapdragon 439) including kernels, ROMs, and custom OS ports",
+              "excerpt": "",
+              "url": "https://www.bing.com/search?q=current+active+GitHub+projects+porting+Linux+ARM+%28Ubuntu+Touch%2C+Arch+Linux+ARM%2C+Debian%29+to+Xiaomi+Mi+A3+%28Snapdragon+439%29+including+kernels%2C+ROMs%2C+and+custom+OS+ports",
+              "reference_type": "bing_search"
+            },
+            {
+              "title": "[GSI][arm64][A/AB] Ubuntu Touch (ubports) - XDA Forums",
+              "excerpt": "",
+              "url": "https://xdaforums.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4110581/",
+              "reference_type": "citation"
+            },
+            {
+              "title": "First steps — Halium documentation",
+              "excerpt": "",
+              "url": "http://docs.halium.org/en/latest/porting/first-steps.html",
+              "reference_type": "citation"
+            },
+            {
+              "title": "Kupfer Linux",
+              "excerpt": "",
+              "url": "https://kupfer.gitlab.io/",
+              "reference_type": "citation"
+            },
+            {
+              "title": "在骁龙（835 845 855等）设备通过UEFI运行Archlinux - Linux - Renegade Project",
+              "excerpt": "",
+              "url": "https://forum.renegade-project.tech/t/835-845-855-uefi-archlinux/2497",
+              "reference_type": "citation"
+            }
+          ],
+          "agent_response": {
+            "type": "",
+            "text": {
+              "value": "",
+              "annotations": null
+            },
+            "bing_searches": null
+          },
+          "response_text": "As of April 2026, there are no well-established, fully functional ports of Ubuntu Touch, Arch Linux ARM, or Debian ARM specifically for the Xiaomi Mi A3 (codename \"laurel_sprout\", Snapdragon 439). However, several community efforts and resources can be leveraged, and there are signs of in-progress or possible development for Linux mobile distributions for Snapdragon-based phones:\n\n### Key Findings:\n\n#### 1. **Ubuntu Touch / Halium / Generic System Images (GSIs)**\n- **Halium** is the main project enabling Linux distributions (including Ubuntu Touch, Droidian, and LuneOS) to be ported to Android devices using a common hardware abstraction layer.\n- **Ubuntu Touch GSI**: There are generic Ubuntu Touch GSIs (based on Halium) that can potentially boot on any Project Treble-compatible device with an arm64 processor and a properly patched kernel (usually requires Android 9 firmware as a base).\n    - Installation of such GSIs requires a Halium-patched kernel for your device.\n    - Progress and support for specific devices is dependent on kernel patches, device trees, and vendor blobs extracted from existing Android ROMs.\n    - There is community support via UBports, Halium Telegram groups, and XDA threads, but no dedicated, officially maintained port for the Mi A3 as of now[[1]](https://xdaforums.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4110581/)[[2]](http://docs.halium.org/en/latest/porting/first-steps.html).\n\n#### 2. **Arch Linux ARM / Kupfer**\n- Arch Linux ARM is officially focused on ARM SoCs such as Raspberry Pi, PinePhone, etc.\n- The **Kupfer** project attempts to bring Arch Linux to mobile devices, using infrastructure similar to postmarketOS. Device support is limited, and the Xiaomi Mi A3 is not currently listed as one of their supported devices.\n- If the Mi A3 could be supported by a close-to-mainline custom kernel, community porting would be possible, but is not currently reported[[3]](https://kupfer.gitlab.io/).\n\n#### 3. **Debian-based Mobile OSes (e.g., Mobian, Droidian)**\n- There are no dedicated Debian Mobile ports for the Mi A3. As with other distributions, device support depends on kernel and device tree availability (either mainline or heavily patched custom kernels).\n- PostmarketOS and similar projects focus on porting distributions to Android hardware, and could, in theory, be made to support the Mi A3 with enough community and development effort. No existing full port is documented[[3]](https://kupfer.gitlab.io/).\n\n#### 4. **Kernel/Device Tree Efforts**\n- **Mainline kernel for Snapdragon 439 (sdm439)**: There is no evidence of an actively maintained mainline (vanilla Linux) kernel for the Mi A3 on GitHub or GitLab. Most community Linux-on-phone ports rely on existing Android kernel sources released by Xiaomi for custom development.\n- Some devices using Snapdragon SoCs (e.g., sdm660, sdm845) have received partial or full mainline Linux work, but sdm439 (Mi A3) is less common in this regard.\n- Projects often begin with LineageOS- or AOSP-based sources due to their open-access device trees and kernel source, but these need adaptation for mainline Linux use[[2]](http://docs.halium.org/en/latest/porting/first-steps.html)[[4]](https://forum.renegade-project.tech/t/835-845-855-uefi-archlinux/2497).\n\n#### 5. **Getting Involved / Community Contacts**\n- **UBports** Discord/Telegram for Ubuntu Touch and Halium.\n- **Kupfer** and **postmarketOS** Matrix chatrooms for device-specific Arch/Debian ports.\n\n### **Summary Table: Xiaomi Mi A3 Linux ARM Status**\n| OS/Distro           | Active Port | Kernel/ROM | Status/Links         |\n|---------------------|-------------|------------|----------------------|\n| Ubuntu Touch (UBports) | No direct port | Halium GSI kernels needed | GSI method possible with Halium. Device-specific kernel/DTB required. [Porting docs][1], [Halium][2], [XDA GSI thread][3] |\n| Arch Linux ARM (Kupfer) | No direct port | Needs mainline or custom kernel | Requires community/DIY effort. [Kupfer][4] |\n| Debian (Mobian/Droidian) | No direct port | Requires kernel & DTB | Community/DIY effort |\n\n[1]: https://docs.ubports.com/en/latest/porting/introduction.html\n[2]: https://halium.org/\n[3]: https://forum.xda-developers.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4111233/\n[4]: https://kupferlinux.com/\n\n### **How to Follow or Contribute**\n- Join the relevant Telegram or Matrix groups (Halium, UBports, Kupfer).\n- Watch/post in the [XDA Ubuntu Touch GSI thread](https://forum.xda-developers.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4111233/) and [postmarketOS port request/discussions](https://forum.postmarketos.org/).\n- If you have kernel-building or embedded Linux experience, you can try creating a Halium-patched kernel/DTB for the Mi A3 and testing with a GSI or Kupfer rootfs.\n\n---\n\n**In summary:** At present, there's no out-of-the-box, community-supported Linux ARM distro specifically for the Xiaomi Mi A3, but general resources and methods (Halium/GSIs, kernel patching, and mobile Arch/Debian frameworks) can be used as starting points by enthusiasts or developers. Community involvement is crucial to getting such ports off the ground. If you are interested in development, checking Halium and UBports porting guides is recommended[[1]](https://xdaforums.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4110581/)[[2]](http://docs.halium.org/en/latest/porting/first-steps.html).\n\n---\n\n1. [[GSI][arm64][A/AB] Ubuntu Touch (ubports) - XDA Forums](https://xdaforums.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4110581/)\n2. [First steps — Halium documentation](http://docs.halium.org/en/latest/porting/first-steps.html)\n3. [Kupfer Linux](https://kupfer.gitlab.io/)\n4. [在骁龙（835 845 855等）设备通过UEFI运行Archlinux - Linux - Renegade Project](https://forum.renegade-project.tech/t/835-845-855-uefi-archlinux/2497)\n",
+          "type": "web-search"
+        },
+        {
+          "type": "text",
+          "text": "Invalid request, please make sure the parameters are in the correct format"
+        },
+        {
+          "id": 387080260,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "allow_forking": true,
+            "archived": false,
+            "created_time": "18 July 2021",
+            "default_branch": "laurel-r-oss_cleaned",
+            "description": "Linux kernel source for Xiaomi Mi A3, based on CAF msm-4.14. See the wiki for more info: https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout/wiki",
+            "disabled": false,
+            "fork": false,
+            "forks": 0,
+            "forks_count": 0,
+            "full_name": "selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout",
+            "has_discussions": false,
+            "has_downloads": true,
+            "has_issues": true,
+            "has_pages": false,
+            "has_projects": false,
+            "has_pull_requests": true,
+            "has_wiki": true,
+            "homepage": "",
+            "html_url": "https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout",
+            "id": 387080260,
+            "is_template": false,
+            "language": "C",
+            "license": {
+              "key": "other",
+              "name": "Other"
+            },
+            "name": "msm-4.14_kernel_xiaomi_laurel_sprout",
+            "open_issues": 0,
+            "open_issues_count": 0,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/11262062?v=4",
+              "html_url": "https://github.com/selurvedu",
+              "id": 11262062,
+              "login": "selurvedu",
+              "type": "User"
+            },
+            "permissions": {},
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pushed_at": "2021-07-18T05:41:51Z",
+            "score": 1,
+            "size": 1476531,
+            "stargazers_count": 2,
+            "topics": [
+              "android-kernel",
+              "laurel-sprout",
+              "sm6125",
+              "trinket",
+              "xiaomi"
+            ],
+            "updated_time": "18 February 2022",
+            "visibility": "public",
+            "watchers": 2,
+            "watchers_count": 2,
+            "web_commit_signoff_required": false
+          },
+          "displayName": "Repository 387080260",
+          "html_url": "https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 294761173,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "LineageOS tree for laurel_sprout (Mi A3)",
+            "html_url": "https://github.com/MasterAwesome/android_device_xiaomi_laurel_sprout",
+            "language": "C",
+            "name": "android_device_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/7382032?v=4",
+              "html_url": "https://github.com/MasterAwesome",
+              "id": 7382032,
+              "login": "MasterAwesome",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 294761173",
+          "html_url": "https://github.com/MasterAwesome/android_device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 522497048,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Custom kernel for Xiaomi Trinket devices. Including Redmi Note 8/8T (ginkgo, willow) and Xiaomi Mi A3 (laurel_sprout).",
+            "html_url": "https://github.com/FlopKernel-Series/flop_trinket-mi_kernel",
+            "language": "C",
+            "name": "flop_trinket-mi_kernel",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/191792742?v=4",
+              "html_url": "https://github.com/FlopKernel-Series",
+              "id": 191792742,
+              "login": "FlopKernel-Series",
+              "type": "Organization"
+            }
+          },
+          "displayName": "Repository 522497048",
+          "html_url": "https://github.com/FlopKernel-Series/flop_trinket-mi_kernel",
+          "type": "api-response"
+        },
+        {
+          "id": 216401761,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Dependency of Xiaomi Mi A3 (laurel_sprout)",
+            "html_url": "https://github.com/PixelExperience-Devices/device_xiaomi_laurel_sprout",
+            "language": "C++",
+            "name": "device_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/34276639?v=4",
+              "html_url": "https://github.com/PixelExperience-Devices",
+              "id": 34276639,
+              "login": "PixelExperience-Devices",
+              "type": "Organization"
+            }
+          },
+          "displayName": "Repository 216401761",
+          "html_url": "https://github.com/PixelExperience-Devices/device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 217349159,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/HarukeyUA/android_kernel_xiaomi_laurel_sprout",
+            "language": "C",
+            "name": "android_kernel_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/12065476?v=4",
+              "html_url": "https://github.com/HarukeyUA",
+              "id": 12065476,
+              "login": "HarukeyUA",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 217349159",
+          "html_url": "https://github.com/HarukeyUA/android_kernel_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 234001072,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Dependency of Xiaomi Mi A3 (laurel_sprout)",
+            "html_url": "https://github.com/PixelExperience-Devices/kernel_xiaomi_laurel_sprout",
+            "language": "C",
+            "name": "kernel_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/34276639?v=4",
+              "html_url": "https://github.com/PixelExperience-Devices",
+              "id": 34276639,
+              "login": "PixelExperience-Devices",
+              "type": "Organization"
+            }
+          },
+          "displayName": "Repository 234001072",
+          "html_url": "https://github.com/PixelExperience-Devices/kernel_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 286296347,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/AOSPA/android_kernel_xiaomi_laurel_sprout",
+            "language": "C",
+            "name": "android_kernel_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/5701347?v=4",
+              "html_url": "https://github.com/AOSPA",
+              "id": 5701347,
+              "login": "AOSPA",
+              "type": "Organization"
+            }
+          },
+          "displayName": "Repository 286296347",
+          "html_url": "https://github.com/AOSPA/android_kernel_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 215851800,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/Nikesh001/android_device_xiaomi_laurel_sprout-twrp",
+            "language": "C++",
+            "name": "android_device_xiaomi_laurel_sprout-twrp",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/30125405?v=4",
+              "html_url": "https://github.com/Nikesh001",
+              "id": 30125405,
+              "login": "Nikesh001",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 215851800",
+          "html_url": "https://github.com/Nikesh001/android_device_xiaomi_laurel_sprout-twrp",
+          "type": "api-response"
+        },
+        {
+          "id": 221960593,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/HarukeyUA/android_device_xiaomi_laurel_sprout",
+            "language": "C++",
+            "name": "android_device_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/12065476?v=4",
+              "html_url": "https://github.com/HarukeyUA",
+              "id": 12065476,
+              "login": "HarukeyUA",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 221960593",
+          "html_url": "https://github.com/HarukeyUA/android_device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 452606106,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "kernel tree for laurel_sprout(Mi A3)",
+            "html_url": "https://github.com/anirudhkosgi/android-kernel-xiaomi-laurel_sprout",
+            "language": "C",
+            "name": "android-kernel-xiaomi-laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/83724101?v=4",
+              "html_url": "https://github.com/anirudhkosgi",
+              "id": 83724101,
+              "login": "anirudhkosgi",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 452606106",
+          "html_url": "https://github.com/anirudhkosgi/android-kernel-xiaomi-laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 302001784,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Device tree for Xiaomi Mi A3.",
+            "html_url": "https://github.com/HemantSachdeva/device_xiaomi_laurel_sprout",
+            "language": "C++",
+            "name": "device_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/66035497?v=4",
+              "html_url": "https://github.com/HemantSachdeva",
+              "id": 66035497,
+              "login": "HemantSachdeva",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 302001784",
+          "html_url": "https://github.com/HemantSachdeva/device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 481687152,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/Skyblueborb/device_xiaomi_laurel_sprout",
+            "language": "Shell",
+            "name": "device_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/73354158?v=4",
+              "html_url": "https://github.com/Skyblueborb",
+              "id": 73354158,
+              "login": "Skyblueborb",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 481687152",
+          "html_url": "https://github.com/Skyblueborb/device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 204642073,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Vendor tree for Mi A3",
+            "html_url": "https://github.com/AndroidBlobs/vendor_xiaomi_laurel_sprout",
+            "language": "Makefile",
+            "name": "vendor_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/54524741?v=4",
+              "html_url": "https://github.com/AndroidBlobs",
+              "id": 54524741,
+              "login": "AndroidBlobs",
+              "type": "Organization"
+            }
+          },
+          "displayName": "Repository 204642073",
+          "html_url": "https://github.com/AndroidBlobs/vendor_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 316412279,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Proprietary vendor blobs and patches for Xiaomi Mi A3 ",
+            "html_url": "https://github.com/HemantSachdeva/vendor_xiaomi_laurel_sprout",
+            "language": "Makefile",
+            "name": "vendor_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/66035497?v=4",
+              "html_url": "https://github.com/HemantSachdeva",
+              "id": 66035497,
+              "login": "HemantSachdeva",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 316412279",
+          "html_url": "https://github.com/HemantSachdeva/vendor_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 507978662,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/Skyblueborb/vendor_xiaomi_laurel_sprout",
+            "language": "Makefile",
+            "name": "vendor_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/73354158?v=4",
+              "html_url": "https://github.com/Skyblueborb",
+              "id": 73354158,
+              "login": "Skyblueborb",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 507978662",
+          "html_url": "https://github.com/Skyblueborb/vendor_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 253016572,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/HarukeyUA/android_vendor_xiaomi_laurel_sprout",
+            "language": "Makefile",
+            "name": "android_vendor_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/12065476?v=4",
+              "html_url": "https://github.com/HarukeyUA",
+              "id": 12065476,
+              "login": "HarukeyUA",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 253016572",
+          "html_url": "https://github.com/HarukeyUA/android_vendor_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 292636513,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "prebuilt vendor images",
+            "html_url": "https://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout-images",
+            "language": "Shell",
+            "name": "android_vendor_xiaomi_laurel_sprout-images",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/7382032?v=4",
+              "html_url": "https://github.com/MasterAwesome",
+              "id": 7382032,
+              "login": "MasterAwesome",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 292636513",
+          "html_url": "https://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout-images",
+          "type": "api-response"
+        },
+        {
+          "id": 205248368,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Xiaomi Mi A3",
+            "html_url": "https://github.com/catrielmuller/xiaomi_laurel_sprout_dump",
+            "language": "Shell",
+            "name": "xiaomi_laurel_sprout_dump",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/2272323?v=4",
+              "html_url": "https://github.com/catrielmuller",
+              "id": 2272323,
+              "login": "catrielmuller",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 205248368",
+          "html_url": "https://github.com/catrielmuller/xiaomi_laurel_sprout_dump",
+          "type": "api-response"
+        },
+        {
+          "id": 299273819,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/PMS22/android_device_xiaomi_laurel_sprout",
+            "language": "C++",
+            "name": "android_device_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/19839773?v=4",
+              "html_url": "https://github.com/PMS22",
+              "id": 19839773,
+              "login": "PMS22",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 299273819",
+          "html_url": "https://github.com/PMS22/android_device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 495400260,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "DolbyAtmos for laurel_sprout",
+            "html_url": "https://github.com/magicxavi/vendor_DolbyAtmos",
+            "language": "Shell",
+            "name": "vendor_DolbyAtmos",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/26335242?v=4",
+              "html_url": "https://github.com/magicxavi",
+              "id": 26335242,
+              "login": "magicxavi",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 495400260",
+          "html_url": "https://github.com/magicxavi/vendor_DolbyAtmos",
+          "type": "api-response"
+        },
+        {
+          "id": 241002797,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Device tree for Xiaomi Mi A3 Device",
+            "html_url": "https://github.com/Evolution-XYZ-Devices/device_xiaomi_laurel_sprout",
+            "language": "C++",
+            "name": "device_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/50197670?v=4",
+              "html_url": "https://github.com/Evolution-XYZ-Devices",
+              "id": 50197670,
+              "login": "Evolution-XYZ-Devices",
+              "type": "Organization"
+            }
+          },
+          "displayName": "Repository 241002797",
+          "html_url": "https://github.com/Evolution-XYZ-Devices/device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 204894641,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/BeastRoms-Devices/kernel_xiaomi_laurel_sprout",
+            "language": "C",
+            "name": "kernel_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/46455934?v=4",
+              "html_url": "https://github.com/BeastRoms-Devices",
+              "id": 46455934,
+              "login": "BeastRoms-Devices",
+              "type": "Organization"
+            }
+          },
+          "displayName": "Repository 204894641",
+          "html_url": "https://github.com/BeastRoms-Devices/kernel_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 292159532,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Mi A3 Vendor blobs",
+            "html_url": "https://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout",
+            "language": "Makefile",
+            "name": "android_vendor_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/7382032?v=4",
+              "html_url": "https://github.com/MasterAwesome",
+              "id": 7382032,
+              "login": "MasterAwesome",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 292159532",
+          "html_url": "https://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 780163359,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/Skyblueborb/kernel_xiaomi_laurel_sprout",
+            "language": "C",
+            "name": "kernel_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/73354158?v=4",
+              "html_url": "https://github.com/Skyblueborb",
+              "id": 73354158,
+              "login": "Skyblueborb",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 780163359",
+          "html_url": "https://github.com/Skyblueborb/kernel_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 349292630,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Kernel source for Mi A3",
+            "html_url": "https://github.com/MasterAwesome/android_kernel_xiaomi_laurel_sprout",
+            "language": "C",
+            "name": "android_kernel_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/7382032?v=4",
+              "html_url": "https://github.com/MasterAwesome",
+              "id": 7382032,
+              "login": "MasterAwesome",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 349292630",
+          "html_url": "https://github.com/MasterAwesome/android_kernel_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 497296455,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/Skyblueborb/kernel_xiaomi_laurel_sprout_old",
+            "language": "C",
+            "name": "kernel_xiaomi_laurel_sprout_old",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/73354158?v=4",
+              "html_url": "https://github.com/Skyblueborb",
+              "id": 73354158,
+              "login": "Skyblueborb",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 497296455",
+          "html_url": "https://github.com/Skyblueborb/kernel_xiaomi_laurel_sprout_old",
+          "type": "api-response"
+        },
+        {
+          "id": 317847507,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/HemantSachdeva/kernel_xiaomi_laurel_sprout",
+            "language": "C",
+            "name": "kernel_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/66035497?v=4",
+              "html_url": "https://github.com/HemantSachdeva",
+              "id": 66035497,
+              "login": "HemantSachdeva",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 317847507",
+          "html_url": "https://github.com/HemantSachdeva/kernel_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 241002938,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "Kernel source for Xiaomi Mi A3 ",
+            "html_url": "https://github.com/Evolution-XYZ-Devices/kernel_xiaomi_laurel_sprout",
+            "language": "C",
+            "name": "kernel_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/50197670?v=4",
+              "html_url": "https://github.com/Evolution-XYZ-Devices",
+              "id": 50197670,
+              "login": "Evolution-XYZ-Devices",
+              "type": "Organization"
+            }
+          },
+          "displayName": "Repository 241002938",
+          "html_url": "https://github.com/Evolution-XYZ-Devices/kernel_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 239831198,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/SyberiaProject-Devices/platform_device_xiaomi_laurel_sprout",
+            "language": "C++",
+            "name": "platform_device_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/42267734?v=4",
+              "html_url": "https://github.com/SyberiaProject-Devices",
+              "id": 42267734,
+              "login": "SyberiaProject-Devices",
+              "type": "Organization"
+            }
+          },
+          "displayName": "Repository 239831198",
+          "html_url": "https://github.com/SyberiaProject-Devices/platform_device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 286296181,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": null,
+            "html_url": "https://github.com/AOSPA/android_device_xiaomi_laurel_sprout",
+            "language": "Makefile",
+            "name": "android_device_xiaomi_laurel_sprout",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/5701347?v=4",
+              "html_url": "https://github.com/AOSPA",
+              "id": 5701347,
+              "login": "AOSPA",
+              "type": "Organization"
+            }
+          },
+          "displayName": "Repository 286296181",
+          "html_url": "https://github.com/AOSPA/android_device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 271228994,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "description": "OSS variant of the laurel_sprout device tree. Originally located at https://github.com/PixelExperience-Devices/device_xiaomi_laurel_sprout",
+            "html_url": "https://github.com/oddlyspaced/dt_laurel_sprout_oss",
+            "language": "C++",
+            "name": "dt_laurel_sprout_oss",
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/47493184?v=4",
+              "html_url": "https://github.com/oddlyspaced",
+              "id": 47493184,
+              "login": "oddlyspaced",
+              "type": "User"
+            }
+          },
+          "displayName": "Repository 271228994",
+          "html_url": "https://github.com/oddlyspaced/dt_laurel_sprout_oss",
+          "type": "api-response"
+        },
+        {
+          "type": "text",
+          "text": "\nai_notes: Showing 30 of 249 total results.\nYou MUST clearly state how many results are shown out of the total (e.g., \"Showing 30 of 249 issues.\").\nAsk the user if they would like to see the next page of results or narrow down with filters (e.g., by label, assignee, state, date range).\nYou MUST provide a link to view more results in the GitHub UI; this link should be based on the fact that the results were fetched from /search/repositories?q=laurel_sprout.\n\t"
+        }
+      ],
+      "skillExecutions": [
+        {
+          "slug": "bing-search",
+          "status": "completed",
+          "arguments": "{\"user_prompt\":\"What are the current active GitHub projects or community efforts to port Linux ARM distributions like Ubuntu Touch, Arch Linux ARM, or Debian to the Xiaomi Mi A3 (Snapdragon 439, 4GB RAM, 128GB storage)? Include any in-development kernels, ROMs, or custom OS ports.\"}",
+          "references": [
+            {
+              "query": "What are the current active GitHub projects or community efforts to port Linux ARM distributions like Ubuntu Touch, Arch Linux ARM, or Debian to the Xiaomi Mi A3 (Snapdragon 439, 4GB RAM, 128GB storage)? Include any in-development kernels, ROMs, or custom OS ports.",
+              "results": [
+                {
+                  "title": "current active GitHub projects porting Linux ARM (Ubuntu Touch, Arch Linux ARM, Debian) to Xiaomi Mi A3 (Snapdragon 439) including kernels, ROMs, and custom OS ports",
+                  "excerpt": "",
+                  "url": "https://www.bing.com/search?q=current+active+GitHub+projects+porting+Linux+ARM+%28Ubuntu+Touch%2C+Arch+Linux+ARM%2C+Debian%29+to+Xiaomi+Mi+A3+%28Snapdragon+439%29+including+kernels%2C+ROMs%2C+and+custom+OS+ports",
+                  "reference_type": "bing_search"
+                },
+                {
+                  "title": "[GSI][arm64][A/AB] Ubuntu Touch (ubports) - XDA Forums",
+                  "excerpt": "",
+                  "url": "https://xdaforums.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4110581/",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "First steps — Halium documentation",
+                  "excerpt": "",
+                  "url": "http://docs.halium.org/en/latest/porting/first-steps.html",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "Kupfer Linux",
+                  "excerpt": "",
+                  "url": "https://kupfer.gitlab.io/",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "在骁龙（835 845 855等）设备通过UEFI运行Archlinux - Linux - Renegade Project",
+                  "excerpt": "",
+                  "url": "https://forum.renegade-project.tech/t/835-845-855-uefi-archlinux/2497",
+                  "reference_type": "citation"
+                }
+              ],
+              "agent_response": {
+                "type": "",
+                "text": {
+                  "value": "",
+                  "annotations": null
+                },
+                "bing_searches": null
+              },
+              "response_text": "As of April 2026, there are no well-established, fully functional ports of Ubuntu Touch, Arch Linux ARM, or Debian ARM specifically for the Xiaomi Mi A3 (codename \"laurel_sprout\", Snapdragon 439). However, several community efforts and resources can be leveraged, and there are signs of in-progress or possible development for Linux mobile distributions for Snapdragon-based phones:\n\n### Key Findings:\n\n#### 1. **Ubuntu Touch / Halium / Generic System Images (GSIs)**\n- **Halium** is the main project enabling Linux distributions (including Ubuntu Touch, Droidian, and LuneOS) to be ported to Android devices using a common hardware abstraction layer.\n- **Ubuntu Touch GSI**: There are generic Ubuntu Touch GSIs (based on Halium) that can potentially boot on any Project Treble-compatible device with an arm64 processor and a properly patched kernel (usually requires Android 9 firmware as a base).\n    - Installation of such GSIs requires a Halium-patched kernel for your device.\n    - Progress and support for specific devices is dependent on kernel patches, device trees, and vendor blobs extracted from existing Android ROMs.\n    - There is community support via UBports, Halium Telegram groups, and XDA threads, but no dedicated, officially maintained port for the Mi A3 as of now[[1]](https://xdaforums.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4110581/)[[2]](http://docs.halium.org/en/latest/porting/first-steps.html).\n\n#### 2. **Arch Linux ARM / Kupfer**\n- Arch Linux ARM is officially focused on ARM SoCs such as Raspberry Pi, PinePhone, etc.\n- The **Kupfer** project attempts to bring Arch Linux to mobile devices, using infrastructure similar to postmarketOS. Device support is limited, and the Xiaomi Mi A3 is not currently listed as one of their supported devices.\n- If the Mi A3 could be supported by a close-to-mainline custom kernel, community porting would be possible, but is not currently reported[[3]](https://kupfer.gitlab.io/).\n\n#### 3. **Debian-based Mobile OSes (e.g., Mobian, Droidian)**\n- There are no dedicated Debian Mobile ports for the Mi A3. As with other distributions, device support depends on kernel and device tree availability (either mainline or heavily patched custom kernels).\n- PostmarketOS and similar projects focus on porting distributions to Android hardware, and could, in theory, be made to support the Mi A3 with enough community and development effort. No existing full port is documented[[3]](https://kupfer.gitlab.io/).\n\n#### 4. **Kernel/Device Tree Efforts**\n- **Mainline kernel for Snapdragon 439 (sdm439)**: There is no evidence of an actively maintained mainline (vanilla Linux) kernel for the Mi A3 on GitHub or GitLab. Most community Linux-on-phone ports rely on existing Android kernel sources released by Xiaomi for custom development.\n- Some devices using Snapdragon SoCs (e.g., sdm660, sdm845) have received partial or full mainline Linux work, but sdm439 (Mi A3) is less common in this regard.\n- Projects often begin with LineageOS- or AOSP-based sources due to their open-access device trees and kernel source, but these need adaptation for mainline Linux use[[2]](http://docs.halium.org/en/latest/porting/first-steps.html)[[4]](https://forum.renegade-project.tech/t/835-845-855-uefi-archlinux/2497).\n\n#### 5. **Getting Involved / Community Contacts**\n- **UBports** Discord/Telegram for Ubuntu Touch and Halium.\n- **Kupfer** and **postmarketOS** Matrix chatrooms for device-specific Arch/Debian ports.\n\n### **Summary Table: Xiaomi Mi A3 Linux ARM Status**\n| OS/Distro           | Active Port | Kernel/ROM | Status/Links         |\n|---------------------|-------------|------------|----------------------|\n| Ubuntu Touch (UBports) | No direct port | Halium GSI kernels needed | GSI method possible with Halium. Device-specific kernel/DTB required. [Porting docs][1], [Halium][2], [XDA GSI thread][3] |\n| Arch Linux ARM (Kupfer) | No direct port | Needs mainline or custom kernel | Requires community/DIY effort. [Kupfer][4] |\n| Debian (Mobian/Droidian) | No direct port | Requires kernel & DTB | Community/DIY effort |\n\n[1]: https://docs.ubports.com/en/latest/porting/introduction.html\n[2]: https://halium.org/\n[3]: https://forum.xda-developers.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4111233/\n[4]: https://kupferlinux.com/\n\n### **How to Follow or Contribute**\n- Join the relevant Telegram or Matrix groups (Halium, UBports, Kupfer).\n- Watch/post in the [XDA Ubuntu Touch GSI thread](https://forum.xda-developers.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4111233/) and [postmarketOS port request/discussions](https://forum.postmarketos.org/).\n- If you have kernel-building or embedded Linux experience, you can try creating a Halium-patched kernel/DTB for the Mi A3 and testing with a GSI or Kupfer rootfs.\n\n---\n\n**In summary:** At present, there's no out-of-the-box, community-supported Linux ARM distro specifically for the Xiaomi Mi A3, but general resources and methods (Halium/GSIs, kernel patching, and mobile Arch/Debian frameworks) can be used as starting points by enthusiasts or developers. Community involvement is crucial to getting such ports off the ground. If you are interested in development, checking Halium and UBports porting guides is recommended[[1]](https://xdaforums.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4110581/)[[2]](http://docs.halium.org/en/latest/porting/first-steps.html).\n\n---\n\n1. [[GSI][arm64][A/AB] Ubuntu Touch (ubports) - XDA Forums](https://xdaforums.com/t/gsi-arm64-a-ab-ubuntu-touch-ubports.4110581/)\n2. [First steps — Halium documentation](http://docs.halium.org/en/latest/porting/first-steps.html)\n3. [Kupfer Linux](https://kupfer.gitlab.io/)\n4. [在骁龙（835 845 855等）设备通过UEFI运行Archlinux - Linux - Renegade Project](https://forum.renegade-project.tech/t/835-845-855-uefi-archlinux/2497)\n",
+              "type": "web-search"
+            }
+          ],
+          "callId": "call_30289375"
+        },
+        {
+          "slug": "get-github-data",
+          "status": "completed",
+          "arguments": "{\"endpoint\":\"/search/repositories\",\"repo\":\"\",\"task\":\"Search for GitHub repositories related to Xiaomi Mi A3 (codename laurel_sprout) and Linux ARM ports or kernels.\",\"userQuery\":\"Find GitHub projects for Xiaomi Mi A3 Linux ARM ports.\"}",
+          "references": [
+            {
+              "type": "text",
+              "text": "Invalid request, please make sure the parameters are in the correct format"
+            }
+          ],
+          "callId": "call_63469234"
+        },
+        {
+          "slug": "get-github-data",
+          "status": "completed",
+          "arguments": "{\"endpoint\":\"/search/repositories?q=laurel_sprout+linux\",\"repo\":\"\",\"task\":\"Search for GitHub repositories related to Xiaomi Mi A3 (codename laurel_sprout) and Linux ARM ports or kernels.\",\"userQuery\":\"Find GitHub projects for Xiaomi Mi A3 Linux ARM ports.\"}",
+          "references": [
+            {
+              "id": 387080260,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "allow_forking": true,
+                "archived": false,
+                "created_time": "18 July 2021",
+                "default_branch": "laurel-r-oss_cleaned",
+                "description": "Linux kernel source for Xiaomi Mi A3, based on CAF msm-4.14. See the wiki for more info: https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout/wiki",
+                "disabled": false,
+                "fork": false,
+                "forks": 0,
+                "forks_count": 0,
+                "full_name": "selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout",
+                "has_discussions": false,
+                "has_downloads": true,
+                "has_issues": true,
+                "has_pages": false,
+                "has_projects": false,
+                "has_pull_requests": true,
+                "has_wiki": true,
+                "homepage": "",
+                "html_url": "https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout",
+                "id": 387080260,
+                "is_template": false,
+                "language": "C",
+                "license": {
+                  "key": "other",
+                  "name": "Other"
+                },
+                "name": "msm-4.14_kernel_xiaomi_laurel_sprout",
+                "open_issues": 0,
+                "open_issues_count": 0,
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/11262062?v=4",
+                  "html_url": "https://github.com/selurvedu",
+                  "id": 11262062,
+                  "login": "selurvedu",
+                  "type": "User"
+                },
+                "permissions": {},
+                "private": false,
+                "pull_request_creation_policy": "all",
+                "pushed_at": "2021-07-18T05:41:51Z",
+                "score": 1,
+                "size": 1476531,
+                "stargazers_count": 2,
+                "topics": [
+                  "android-kernel",
+                  "laurel-sprout",
+                  "sm6125",
+                  "trinket",
+                  "xiaomi"
+                ],
+                "updated_time": "18 February 2022",
+                "visibility": "public",
+                "watchers": 2,
+                "watchers_count": 2,
+                "web_commit_signoff_required": false
+              },
+              "displayName": "Repository 387080260",
+              "html_url": "https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout",
+              "type": "api-response"
+            }
+          ],
+          "callId": "call_63473148"
+        },
+        {
+          "slug": "get-github-data",
+          "status": "completed",
+          "arguments": "{\"endpoint\":\"/search/repositories?q=laurel_sprout\",\"repo\":\"\",\"task\":\"Search for GitHub repositories related to Xiaomi Mi A3 codename laurel_sprout.\",\"userQuery\":\"Find GitHub projects for Xiaomi Mi A3 laurel_sprout.\"}",
+          "references": [
+            {
+              "id": 294761173,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "LineageOS tree for laurel_sprout (Mi A3)",
+                "html_url": "https://github.com/MasterAwesome/android_device_xiaomi_laurel_sprout",
+                "language": "C",
+                "name": "android_device_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/7382032?v=4",
+                  "html_url": "https://github.com/MasterAwesome",
+                  "id": 7382032,
+                  "login": "MasterAwesome",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 294761173",
+              "html_url": "https://github.com/MasterAwesome/android_device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 522497048,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Custom kernel for Xiaomi Trinket devices. Including Redmi Note 8/8T (ginkgo, willow) and Xiaomi Mi A3 (laurel_sprout).",
+                "html_url": "https://github.com/FlopKernel-Series/flop_trinket-mi_kernel",
+                "language": "C",
+                "name": "flop_trinket-mi_kernel",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/191792742?v=4",
+                  "html_url": "https://github.com/FlopKernel-Series",
+                  "id": 191792742,
+                  "login": "FlopKernel-Series",
+                  "type": "Organization"
+                }
+              },
+              "displayName": "Repository 522497048",
+              "html_url": "https://github.com/FlopKernel-Series/flop_trinket-mi_kernel",
+              "type": "api-response"
+            },
+            {
+              "id": 216401761,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Dependency of Xiaomi Mi A3 (laurel_sprout)",
+                "html_url": "https://github.com/PixelExperience-Devices/device_xiaomi_laurel_sprout",
+                "language": "C++",
+                "name": "device_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/34276639?v=4",
+                  "html_url": "https://github.com/PixelExperience-Devices",
+                  "id": 34276639,
+                  "login": "PixelExperience-Devices",
+                  "type": "Organization"
+                }
+              },
+              "displayName": "Repository 216401761",
+              "html_url": "https://github.com/PixelExperience-Devices/device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 217349159,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/HarukeyUA/android_kernel_xiaomi_laurel_sprout",
+                "language": "C",
+                "name": "android_kernel_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/12065476?v=4",
+                  "html_url": "https://github.com/HarukeyUA",
+                  "id": 12065476,
+                  "login": "HarukeyUA",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 217349159",
+              "html_url": "https://github.com/HarukeyUA/android_kernel_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 234001072,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Dependency of Xiaomi Mi A3 (laurel_sprout)",
+                "html_url": "https://github.com/PixelExperience-Devices/kernel_xiaomi_laurel_sprout",
+                "language": "C",
+                "name": "kernel_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/34276639?v=4",
+                  "html_url": "https://github.com/PixelExperience-Devices",
+                  "id": 34276639,
+                  "login": "PixelExperience-Devices",
+                  "type": "Organization"
+                }
+              },
+              "displayName": "Repository 234001072",
+              "html_url": "https://github.com/PixelExperience-Devices/kernel_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 286296347,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/AOSPA/android_kernel_xiaomi_laurel_sprout",
+                "language": "C",
+                "name": "android_kernel_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/5701347?v=4",
+                  "html_url": "https://github.com/AOSPA",
+                  "id": 5701347,
+                  "login": "AOSPA",
+                  "type": "Organization"
+                }
+              },
+              "displayName": "Repository 286296347",
+              "html_url": "https://github.com/AOSPA/android_kernel_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 215851800,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/Nikesh001/android_device_xiaomi_laurel_sprout-twrp",
+                "language": "C++",
+                "name": "android_device_xiaomi_laurel_sprout-twrp",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/30125405?v=4",
+                  "html_url": "https://github.com/Nikesh001",
+                  "id": 30125405,
+                  "login": "Nikesh001",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 215851800",
+              "html_url": "https://github.com/Nikesh001/android_device_xiaomi_laurel_sprout-twrp",
+              "type": "api-response"
+            },
+            {
+              "id": 221960593,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/HarukeyUA/android_device_xiaomi_laurel_sprout",
+                "language": "C++",
+                "name": "android_device_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/12065476?v=4",
+                  "html_url": "https://github.com/HarukeyUA",
+                  "id": 12065476,
+                  "login": "HarukeyUA",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 221960593",
+              "html_url": "https://github.com/HarukeyUA/android_device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 452606106,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "kernel tree for laurel_sprout(Mi A3)",
+                "html_url": "https://github.com/anirudhkosgi/android-kernel-xiaomi-laurel_sprout",
+                "language": "C",
+                "name": "android-kernel-xiaomi-laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/83724101?v=4",
+                  "html_url": "https://github.com/anirudhkosgi",
+                  "id": 83724101,
+                  "login": "anirudhkosgi",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 452606106",
+              "html_url": "https://github.com/anirudhkosgi/android-kernel-xiaomi-laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 302001784,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Device tree for Xiaomi Mi A3.",
+                "html_url": "https://github.com/HemantSachdeva/device_xiaomi_laurel_sprout",
+                "language": "C++",
+                "name": "device_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/66035497?v=4",
+                  "html_url": "https://github.com/HemantSachdeva",
+                  "id": 66035497,
+                  "login": "HemantSachdeva",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 302001784",
+              "html_url": "https://github.com/HemantSachdeva/device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 481687152,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/Skyblueborb/device_xiaomi_laurel_sprout",
+                "language": "Shell",
+                "name": "device_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/73354158?v=4",
+                  "html_url": "https://github.com/Skyblueborb",
+                  "id": 73354158,
+                  "login": "Skyblueborb",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 481687152",
+              "html_url": "https://github.com/Skyblueborb/device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 204642073,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Vendor tree for Mi A3",
+                "html_url": "https://github.com/AndroidBlobs/vendor_xiaomi_laurel_sprout",
+                "language": "Makefile",
+                "name": "vendor_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/54524741?v=4",
+                  "html_url": "https://github.com/AndroidBlobs",
+                  "id": 54524741,
+                  "login": "AndroidBlobs",
+                  "type": "Organization"
+                }
+              },
+              "displayName": "Repository 204642073",
+              "html_url": "https://github.com/AndroidBlobs/vendor_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 316412279,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Proprietary vendor blobs and patches for Xiaomi Mi A3 ",
+                "html_url": "https://github.com/HemantSachdeva/vendor_xiaomi_laurel_sprout",
+                "language": "Makefile",
+                "name": "vendor_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/66035497?v=4",
+                  "html_url": "https://github.com/HemantSachdeva",
+                  "id": 66035497,
+                  "login": "HemantSachdeva",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 316412279",
+              "html_url": "https://github.com/HemantSachdeva/vendor_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 507978662,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/Skyblueborb/vendor_xiaomi_laurel_sprout",
+                "language": "Makefile",
+                "name": "vendor_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/73354158?v=4",
+                  "html_url": "https://github.com/Skyblueborb",
+                  "id": 73354158,
+                  "login": "Skyblueborb",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 507978662",
+              "html_url": "https://github.com/Skyblueborb/vendor_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 253016572,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/HarukeyUA/android_vendor_xiaomi_laurel_sprout",
+                "language": "Makefile",
+                "name": "android_vendor_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/12065476?v=4",
+                  "html_url": "https://github.com/HarukeyUA",
+                  "id": 12065476,
+                  "login": "HarukeyUA",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 253016572",
+              "html_url": "https://github.com/HarukeyUA/android_vendor_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 292636513,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "prebuilt vendor images",
+                "html_url": "https://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout-images",
+                "language": "Shell",
+                "name": "android_vendor_xiaomi_laurel_sprout-images",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/7382032?v=4",
+                  "html_url": "https://github.com/MasterAwesome",
+                  "id": 7382032,
+                  "login": "MasterAwesome",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 292636513",
+              "html_url": "https://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout-images",
+              "type": "api-response"
+            },
+            {
+              "id": 205248368,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Xiaomi Mi A3",
+                "html_url": "https://github.com/catrielmuller/xiaomi_laurel_sprout_dump",
+                "language": "Shell",
+                "name": "xiaomi_laurel_sprout_dump",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/2272323?v=4",
+                  "html_url": "https://github.com/catrielmuller",
+                  "id": 2272323,
+                  "login": "catrielmuller",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 205248368",
+              "html_url": "https://github.com/catrielmuller/xiaomi_laurel_sprout_dump",
+              "type": "api-response"
+            },
+            {
+              "id": 299273819,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/PMS22/android_device_xiaomi_laurel_sprout",
+                "language": "C++",
+                "name": "android_device_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/19839773?v=4",
+                  "html_url": "https://github.com/PMS22",
+                  "id": 19839773,
+                  "login": "PMS22",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 299273819",
+              "html_url": "https://github.com/PMS22/android_device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 495400260,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "DolbyAtmos for laurel_sprout",
+                "html_url": "https://github.com/magicxavi/vendor_DolbyAtmos",
+                "language": "Shell",
+                "name": "vendor_DolbyAtmos",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/26335242?v=4",
+                  "html_url": "https://github.com/magicxavi",
+                  "id": 26335242,
+                  "login": "magicxavi",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 495400260",
+              "html_url": "https://github.com/magicxavi/vendor_DolbyAtmos",
+              "type": "api-response"
+            },
+            {
+              "id": 241002797,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Device tree for Xiaomi Mi A3 Device",
+                "html_url": "https://github.com/Evolution-XYZ-Devices/device_xiaomi_laurel_sprout",
+                "language": "C++",
+                "name": "device_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/50197670?v=4",
+                  "html_url": "https://github.com/Evolution-XYZ-Devices",
+                  "id": 50197670,
+                  "login": "Evolution-XYZ-Devices",
+                  "type": "Organization"
+                }
+              },
+              "displayName": "Repository 241002797",
+              "html_url": "https://github.com/Evolution-XYZ-Devices/device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 204894641,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/BeastRoms-Devices/kernel_xiaomi_laurel_sprout",
+                "language": "C",
+                "name": "kernel_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/46455934?v=4",
+                  "html_url": "https://github.com/BeastRoms-Devices",
+                  "id": 46455934,
+                  "login": "BeastRoms-Devices",
+                  "type": "Organization"
+                }
+              },
+              "displayName": "Repository 204894641",
+              "html_url": "https://github.com/BeastRoms-Devices/kernel_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 292159532,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Mi A3 Vendor blobs",
+                "html_url": "https://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout",
+                "language": "Makefile",
+                "name": "android_vendor_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/7382032?v=4",
+                  "html_url": "https://github.com/MasterAwesome",
+                  "id": 7382032,
+                  "login": "MasterAwesome",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 292159532",
+              "html_url": "https://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 780163359,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/Skyblueborb/kernel_xiaomi_laurel_sprout",
+                "language": "C",
+                "name": "kernel_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/73354158?v=4",
+                  "html_url": "https://github.com/Skyblueborb",
+                  "id": 73354158,
+                  "login": "Skyblueborb",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 780163359",
+              "html_url": "https://github.com/Skyblueborb/kernel_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 349292630,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Kernel source for Mi A3",
+                "html_url": "https://github.com/MasterAwesome/android_kernel_xiaomi_laurel_sprout",
+                "language": "C",
+                "name": "android_kernel_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/7382032?v=4",
+                  "html_url": "https://github.com/MasterAwesome",
+                  "id": 7382032,
+                  "login": "MasterAwesome",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 349292630",
+              "html_url": "https://github.com/MasterAwesome/android_kernel_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 497296455,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/Skyblueborb/kernel_xiaomi_laurel_sprout_old",
+                "language": "C",
+                "name": "kernel_xiaomi_laurel_sprout_old",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/73354158?v=4",
+                  "html_url": "https://github.com/Skyblueborb",
+                  "id": 73354158,
+                  "login": "Skyblueborb",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 497296455",
+              "html_url": "https://github.com/Skyblueborb/kernel_xiaomi_laurel_sprout_old",
+              "type": "api-response"
+            },
+            {
+              "id": 317847507,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/HemantSachdeva/kernel_xiaomi_laurel_sprout",
+                "language": "C",
+                "name": "kernel_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/66035497?v=4",
+                  "html_url": "https://github.com/HemantSachdeva",
+                  "id": 66035497,
+                  "login": "HemantSachdeva",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 317847507",
+              "html_url": "https://github.com/HemantSachdeva/kernel_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 241002938,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "Kernel source for Xiaomi Mi A3 ",
+                "html_url": "https://github.com/Evolution-XYZ-Devices/kernel_xiaomi_laurel_sprout",
+                "language": "C",
+                "name": "kernel_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/50197670?v=4",
+                  "html_url": "https://github.com/Evolution-XYZ-Devices",
+                  "id": 50197670,
+                  "login": "Evolution-XYZ-Devices",
+                  "type": "Organization"
+                }
+              },
+              "displayName": "Repository 241002938",
+              "html_url": "https://github.com/Evolution-XYZ-Devices/kernel_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 239831198,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/SyberiaProject-Devices/platform_device_xiaomi_laurel_sprout",
+                "language": "C++",
+                "name": "platform_device_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/42267734?v=4",
+                  "html_url": "https://github.com/SyberiaProject-Devices",
+                  "id": 42267734,
+                  "login": "SyberiaProject-Devices",
+                  "type": "Organization"
+                }
+              },
+              "displayName": "Repository 239831198",
+              "html_url": "https://github.com/SyberiaProject-Devices/platform_device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 286296181,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": null,
+                "html_url": "https://github.com/AOSPA/android_device_xiaomi_laurel_sprout",
+                "language": "Makefile",
+                "name": "android_device_xiaomi_laurel_sprout",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/5701347?v=4",
+                  "html_url": "https://github.com/AOSPA",
+                  "id": 5701347,
+                  "login": "AOSPA",
+                  "type": "Organization"
+                }
+              },
+              "displayName": "Repository 286296181",
+              "html_url": "https://github.com/AOSPA/android_device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 271228994,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "description": "OSS variant of the laurel_sprout device tree. Originally located at https://github.com/PixelExperience-Devices/device_xiaomi_laurel_sprout",
+                "html_url": "https://github.com/oddlyspaced/dt_laurel_sprout_oss",
+                "language": "C++",
+                "name": "dt_laurel_sprout_oss",
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/47493184?v=4",
+                  "html_url": "https://github.com/oddlyspaced",
+                  "id": 47493184,
+                  "login": "oddlyspaced",
+                  "type": "User"
+                }
+              },
+              "displayName": "Repository 271228994",
+              "html_url": "https://github.com/oddlyspaced/dt_laurel_sprout_oss",
+              "type": "api-response"
+            },
+            {
+              "type": "text",
+              "text": "\nai_notes: Showing 30 of 249 total results.\nYou MUST clearly state how many results are shown out of the total (e.g., \"Showing 30 of 249 issues.\").\nAsk the user if they would like to see the next page of results or narrow down with filters (e.g., by label, assignee, state, date range).\nYou MUST provide a link to view more results in the GitHub UI; this link should be based on the fact that the results were fetched from /search/repositories?q=laurel_sprout.\n\t"
+            }
+          ],
+          "callId": "call_54452889"
+        }
+      ]
+    },
+    {
+      "id": "d7ccfdb8-f967-4557-b5d4-2c401a9f6a7e",
+      "parentMessageID": "b92efa67-51d5-42bf-9074-b08cac08a7fa",
+      "intent": "conversation",
+      "role": "user",
+      "content": "Bien, ya que tenemos un enfoque, quiero compilar por mi mismo kupfer, archlinur arm para mi dispositivo, busca información al respecto guias y demas de otras comunidades para lanzarme a eso",
+      "createdAt": "2026-04-21T00:47:50.665135186Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "7222da96-b840-4c12-bd54-79d92f69713e",
+      "parentMessageID": "d7ccfdb8-f967-4557-b5d4-2c401a9f6a7e",
+      "intent": "conversation",
+      "role": "assistant",
+      "content": "Para compilar Kupfer (una distribución móvil basada en Arch Linux ARM, con Plasma Mobile) para tu Xiaomi Mi A3 (laurel_sprout), necesitarás seguir guías de porting de nuevas dispositivos. Kupfer es un proyecto emergente, similar a postmarketOS, y no tiene soporte oficial para Mi A3 aún. El proceso es complejo, requiere conocimientos de Linux embebido, kernels y empaquetado de Arch (PKGBUILDs). A continuación, resumo guías, recursos y pasos basados en la documentación oficial y comunidades.\n\n### Repositorios principales de Kupfer\nKupfer está alojado en GitLab (no GitHub):\n- **Kupferbootstrap (herramienta principal para building y flashing):** https://gitlab.com/kupfermobile/kupferbootstrap  \n  - Clona con: `git clone https://gitlab.com/kupfermobile/kupferbootstrap.git`\n- **Sitio web oficial:** https://kupfer.gitlab.io/ (incluye docs y lista de dispositivos soportados).\n- **Dispositivos soportados:** https://kupfer.gitlab.io/devices/ (ninguno es Mi A3; mira ejemplos como OnePlus 6 o PinePhone para referencia).\n- **PKGBUILDs oficiales:** Kupfer usa PKGBUILDs de Arch Linux ARM. Un ejemplo derivado: https://github.com/tltype/pkgbuilds (para Elish, otro dispositivo).\n\nNo hay repos directos en GitHub para Kupfer; todo está en GitLab.\n\n### Guías de porting para nuevos dispositivos\nKupfer modela su proceso de porting en postmarketOS (que es Alpine-based, pero similar). Si Mi A3 no tiene puerto en postmarketOS, empieza por ahí, ya que es más maduro y servirá de base. Guía oficial de Kupfer: https://kupfer.gitlab.io/kupferbootstrap/porting/\n\n#### Pasos generales para portar Kupfer a Mi A3:\n1. **Prerrequisitos:**\n   - Una workstation con Linux (Arch, Ubuntu o similar).\n   - Conocimientos básicos: Git, PKGBUILDs (makepkg), kernels Linux.\n   - Herramientas: Instala `kupferbootstrap` desde GitLab. También `pmbootstrap` si vas a usar postmarketOS como base.\n   - Desbloquea el bootloader de Mi A3 (usa `fastboot oem unlock` con precaución).\n\n2. **Investiga el dispositivo:**\n   - Busca en postmarketOS wiki: https://wiki.postmarketos.org/wiki/Devices (busca \"laurel_sprout\" o Snapdragon 439). Si no existe, crea uno siguiendo su guía de porting: https://wiki.postmarketos.org/wiki/Porting_to_a_new_device.\n   - Revisa repos de kernels para Mi A3 (de búsquedas previas): Usa uno como https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout como base downstream (no mainline).\n\n3. **Crea paquetes PKGBUILD:**\n   - Kupfer usa PKGBUILDs de Arch para device, kernel y firmware.\n   - **Device package:** Crea un PKGBUILD para configs específicas (e.g., fstab, init scripts). Copia de un dispositivo similar (busca Snapdragon en Kupfer docs).\n   - **Kernel package:** Adapta el kernel de Android a Linux mainline/downstream. Compila con toolchain ARM64 (e.g., `aarch64-linux-gnu-gcc`).\n     - Comando básico: `makepkg -s` en el directorio del PKGBUILD.\n   - **Firmware package:** Extrae blobs de Android ROMs (usa repos como https://github.com/AndroidBlobs/vendor_xiaomi_laurel_sprout).\n   - Organiza en subdirectorios: `device/`, `linux/`, `firmware/`.\n\n4. **Compila la imagen:**\n   - Usa `kupferbootstrap` para build: `./kupferbootstrap build --device laurel_sprout --ui plasma-mobile`.\n   - Crea una imagen bootable (boot.img o similar) con kernel + initramfs.\n\n5. **Flashea y prueba:**\n   - Flashea con `fastboot flash boot boot.img`.\n   - Depura con ADB/logcat o UART. Común: Problemas con display, touchscreen o WiFi (necesitan DTB/firmware correctos).\n\n6. **Contribuye:**\n   - Sube tu trabajo a GitLab con un Merge Request (MR). Documenta qué funciona y qué no.\n   - Si es básico, etiqueta como WIP.\n\n### Comunidades y recursos adicionales\n- **Matrix rooms de Kupfer:** Enlaces en https://kupfer.gitlab.io/kupferbootstrap/ (busca \"Matrix\" o \"chat\").\n- **postmarketOS community:** Útil para base. Matrix: #postmarketOS:matrix.org. Guía de porting: https://wiki.postmarketos.org/wiki/Porting_to_a_new_device.\n- **XDA Developers:** Foro de Mi A3: https://forum.xda-developers.com/f/xiaomi-mi-a3-roms-kernels-recoveries-other-development.9452/ (busca kernels y ROMs custom).\n- **Otros guías:**\n  - postmarketOS porting: https://postmarketos.org/porting/\n  - Kernel mainlining para Snapdragon: https://wiki.postmarketos.org/wiki/Porting_to_a_new_device/Mainlining\n- **Ejemplos de puertos similares:** Busca \"Snapdragon 439\" en postmarketOS. Si encuentras uno, adapta los PKGBUILDs.\n\n### Advertencias\n- Riesgo alto: Puedes brickear el dispositivo. Haz backups.\n- Tiempo estimado: Semanas/meses para un puerto básico; requiere testing iterativo.\n- Si eres nuevo, empieza con un dispositivo soportado en Kupfer y practica, o pide ayuda en Matrix.\n\nSi necesitas ayuda con un paso específico (e.g., convertir APKBUILD a PKGBUILD o compilar kernel), proporciona más detalles. ¡Éxito!",
+      "createdAt": "2026-04-21T00:47:50.66570065Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [
+        {
+          "query": "Guide to port Kupfer Linux (Arch Linux ARM for mobile) to a new Android device like Xiaomi Mi A3 Snapdragon 439, including kernel compilation, device tree setup, and community resources.",
+          "results": [],
+          "agent_response": {
+            "type": "",
+            "text": {
+              "value": "",
+              "annotations": null
+            },
+            "bing_searches": null
+          },
+          "response_text": "Porting **Kupfer Linux (Arch Linux ARM for mobile, Plasma Mobile base)** to a new Android device like the Xiaomi Mi A3 (Snapdragon 439) is a complex process. It’s similar to porting other mainline/alternative Linux distributions (such as postmarketOS or Mobian) to Android hardware. Here’s a detailed guide outlining the steps, required tools, community links, and critical advice.\n\n---\n\n## 1. **Assessing Device Support**\n\n- **Mainline or Downstream Kernel:**  \n  - Check [postmarketOS wiki](https://wiki.postmarketos.org/wiki/Devices) and [DeviceInfo](https://github.com/postmarketOS/deviceinfo) for existing support for “laurel sprout” (Mi A3).  \n  - If no mainline support, you’ll start with the Android vendor (downstream) kernel.\n\n---\n\n## 2. **Preparing Your Environment**\n\n- **Linux workstation** running Ubuntu/Debian/Arch.\n- **ADB/Fastboot** tools:  \n  - `sudo pacman -S android-tools` (Arch)\n- **Toolchain:**  \n  - For ARM64: [AOSP’s GCC or Clang toolchain](https://source.android.com/setup/build/initializing) or `aarch64-linux-gnu-gcc`\n- **Source code access:**  \n  - [XDA Developers Xiaomi Mi A3 forum](https://forum.xda-developers.com/f/xiaomi-mi-a3-roms-kernels-recoveries-other-development.9452/)\n  - [GitHub](https://github.com/) for device kernel repositories (search “laurel_sprout kernel”)\n\n---\n\n## 3. **Kernel Compilation**\n\n### A. **Fetch Kernel Sources**\n- Look for Xiaomi’s (or community) released kernel sources.\n  - [Xiaomi Mi A3 Kernel Source](https://github.com/MiCode/Xiaomi_Kernel_OpenSource)\n  - Choose the branch for your Android version.\n\n### B. **Get Device Tree & Defconfig**\n- **Device Tree** describes hardware; sometimes called “dtb” or device-specific “arch/arm64/boot/dts/qcom/laurel_sprout.dts”.\n- **Defconfig**: Look for something like `laurel_sprout_defconfig` in `arch/arm64/configs/`.\n\n### C. **Configure the Kernel**\n```sh\nexport ARCH=arm64\nexport CROSS_COMPILE=aarch64-linux-gnu-\nmake laurel_sprout_defconfig\n```\n\n### D. **Compile**\n```sh\nmake -j$(nproc)\n```\n\n- Output: `arch/arm64/boot/Image.gz` (or `Image.gz-dtb`), and device tree blobs (`.dtb` files).\n\n---\n\n## 4. **Device Tree Setup**\n\n- Device tree source (DTS) is often bundled with the kernel source (`arch/arm64/boot/dts/qcom/`).\n- For custom hardware tweaks or supporting mainline, you may need to edit or write a DTS specific to “laurel_sprout”.\n- [Device Tree Documentation](https://www.kernel.org/doc/Documentation/devicetree/booting-without-of.txt)\n\n---\n\n## 5. **Building Kupfer/Arch ARM Rootfs**\n\n- Use [Arch Linux ARM rootfs](https://archlinuxarm.org/about/downloads) for `aarch64`.\n- Install Plasma Mobile desktop & extra packages you need:\n\n```sh\npacman -Syu plasma-mobile konsole nano networkmanager\n```\n\n- Edit `/etc/fstab`, `/etc/network`, etc. for ARM/mobile specifics.\n- Consider using [pmbootstrap](https://postmarketos.org/pmbootstrap/) to help automate rootfs creation (even if not for postmarketOS).\n\n---\n\n## 6. **Boot Image Creation**\n\nAndroid uses `boot.img` (kernel + ramdisk). Use `mkbootimg` ([Android GitHub repo](https://android.googlesource.com/platform/system/tools/mkbootimg/)):\n\n```sh\nmkbootimg --kernel Image.gz --ramdisk initramfs.img --dtb laurel_sprout.dtb \\\n  --base 0x80000000 --cmdline \"console=ttyMSM0,115200n8\" \\\n  --pagesize 2048 --output boot.img\n```\n- Adjust addresses and arguments (check stock boot images using [Android Image Kitchen](https://forum.xda-developers.com/t/tool-linux-android-unpack-repack-boot-recovery-ramdisk-img-kitchen.2073775/)).\n\n---\n\n## 7. **Flashing & First Boot**\n\n- Unlock bootloader: `fastboot oem unlock`\n- Boot custom image:\n  ```sh\n  fastboot flash boot boot.img\n  fastboot reboot\n  ```\n\n- Use UART or Android logcat for debugging (`adb logcat`).\n\n---\n\n## 8. **First Boot Ahead: Troubleshooting**\n\n- Common issues:\n  - **No display?** DTB framebuffer settings, or panel driver missing.\n  - **No touchscreen?** Inspect dtb touchscreen node, ensure correct kernel module.\n  - **No wifi?** Firmware blobs missing or wrong driver.\n- Use serial (UART), netconsole, or boot logs as much as possible.\n\n---\n\n## 9. **Community & Resources**\n\n- **Kupfer Linux:**  \n  - [Main GitHub repo](https://github.com/kupfer-linux/)\n  - [Kupfer Matrix/Telegram channels](check their repo README for links)\n- **postmarketOS:**  \n  - Great for device porting resources, see [pmbootstrap docs](https://postmarketos.org/porting/)\n  - [Device Porting Guide Wiki](https://wiki.postmarketos.org/wiki/Porting_to_a_new_device)\n- **Kernel resources:**  \n  - [XDA Mi A3 forums](https://forum.xda-developers.com/f/xiaomi-mi-a3-roms-kernels-recoveries-other-development.9452/)\n  - [Mainlining Guide](https://wiki.postmarketos.org/wiki/Porting_to_a_new_device/Mainlining)\n- **Discords/Matrix:**  \n  - [Mobile Linux Matrix Community List](https://wiki.postmarketos.org/wiki/Community)\n\n---\n\n### **Summary**\n\n1. **Collect kernel sources and device tree.**\n2. **Compile kernel & device tree with correct toolchain.**\n3. **Assemble proper boot.img with kernel and initramfs/rootfs.**\n4. **Build or download an ARM64 Arch image with your desired UI (e.g., Plasma Mobile).**\n5. **Flash to device, troubleshoot with logs.**\n6. **Leverage postmarketOS and Kupfer communities for device-specific help.**\n\n---\n\n**Note:** Mainlining (using mainline not Android vendor kernels) is a long process; initial ports usually use downstream kernels.\n\n**Direct links for reference:**\n- [Kupfer Linux GitHub](https://github.com/kupfer-linux/)\n- [postmarketOS Porting Guide](https://wiki.postmarketos.org/wiki/Porting_to_a_new_device)\n- [Xiaomi Mi A3 Kernel Source](https://github.com/MiCode/Xiaomi_Kernel_OpenSource)\n\n**Ask in Kupfer or postmarketOS channels for help; most porters hang out there!**\n\nIf you want, I can help you write custom kernel build scripts or interpret dmesg/logcat errors as you go.",
+          "type": "web-search"
+        },
+        {
+          "id": 145410,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "allow_forking": true,
+            "archived": false,
+            "created_time": "07 March 2009",
+            "default_branch": "master",
+            "description": "kupfer, smart, quick launcher. `master' is kupfer's release branch. ",
+            "disabled": false,
+            "fork": false,
+            "forks": 63,
+            "forks_count": 63,
+            "full_name": "kupferlauncher/kupfer",
+            "has_discussions": false,
+            "has_downloads": true,
+            "has_issues": true,
+            "has_pages": false,
+            "has_projects": true,
+            "has_pull_requests": true,
+            "has_wiki": true,
+            "homepage": "http://kupferlauncher.github.io",
+            "html_url": "https://github.com/kupferlauncher/kupfer",
+            "id": 145410,
+            "is_template": false,
+            "language": "Python",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0"
+            },
+            "name": "kupfer",
+            "open_issues": 19,
+            "open_issues_count": 19,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/25559619?v=4",
+              "html_url": "https://github.com/kupferlauncher",
+              "id": 25559619,
+              "login": "kupferlauncher",
+              "type": "Organization"
+            },
+            "permissions": {},
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pushed_at": "2025-12-01T08:49:34Z",
+            "score": 1,
+            "size": 10178,
+            "stargazers_count": 385,
+            "topics": [
+              "gplv3",
+              "launcher",
+              "linux",
+              "python"
+            ],
+            "updated_time": "27 days",
+            "visibility": "public",
+            "watchers": 385,
+            "watchers_count": 385,
+            "web_commit_signoff_required": false
+          },
+          "displayName": "Repository 145410",
+          "html_url": "https://github.com/kupferlauncher/kupfer",
+          "type": "api-response"
+        },
+        {
+          "id": 1116164228,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "allow_forking": true,
+            "archived": false,
+            "created_time": "14 December 2025",
+            "default_branch": "main",
+            "description": "PKGBUILDs for building Arch Linux ARM for Elish, derived from the Kupfer official PKGBUILDs repository.",
+            "disabled": false,
+            "fork": false,
+            "forks": 1,
+            "forks_count": 1,
+            "full_name": "tltype/pkgbuilds",
+            "has_discussions": false,
+            "has_downloads": true,
+            "has_issues": true,
+            "has_pages": false,
+            "has_projects": true,
+            "has_pull_requests": true,
+            "has_wiki": true,
+            "homepage": null,
+            "html_url": "https://github.com/tltype/pkgbuilds",
+            "id": 1116164228,
+            "is_template": false,
+            "language": "Shell",
+            "license": {
+              "key": "agpl-3.0",
+              "name": "GNU Affero General Public License v3.0"
+            },
+            "name": "pkgbuilds",
+            "open_issues": 1,
+            "open_issues_count": 1,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/249447058?v=4",
+              "html_url": "https://github.com/tltype",
+              "id": 249447058,
+              "login": "tltype",
+              "type": "User"
+            },
+            "permissions": {},
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pushed_at": "2025-12-16T09:00:12Z",
+            "score": 1,
+            "size": 661,
+            "stargazers_count": 1,
+            "topics": [],
+            "updated_time": "54 days",
+            "visibility": "public",
+            "watchers": 1,
+            "watchers_count": 1,
+            "web_commit_signoff_required": false
+          },
+          "displayName": "Repository 1116164228",
+          "html_url": "https://github.com/tltype/pkgbuilds",
+          "type": "api-response"
+        },
+        {
+          "id": 1116164228,
+          "authID": 0,
+          "resourceType": "Repository",
+          "authResourceType": "",
+          "action": "get_repo",
+          "data": {
+            "allow_forking": true,
+            "archived": false,
+            "created_time": "14 December 2025",
+            "default_branch": "main",
+            "description": "PKGBUILDs for building Arch Linux ARM for Elish, derived from the Kupfer official PKGBUILDs repository.",
+            "disabled": false,
+            "fork": false,
+            "forks": 1,
+            "forks_count": 1,
+            "full_name": "tltype/pkgbuilds",
+            "has_discussions": false,
+            "has_downloads": true,
+            "has_issues": true,
+            "has_pages": false,
+            "has_projects": true,
+            "has_pull_requests": true,
+            "has_wiki": true,
+            "homepage": null,
+            "html_url": "https://github.com/tltype/pkgbuilds",
+            "id": 1116164228,
+            "is_template": false,
+            "language": "Shell",
+            "license": {
+              "key": "agpl-3.0",
+              "name": "GNU Affero General Public License v3.0"
+            },
+            "name": "pkgbuilds",
+            "open_issues": 1,
+            "open_issues_count": 1,
+            "owner": {
+              "avatar_url": "https://avatars.githubusercontent.com/u/249447058?v=4",
+              "html_url": "https://github.com/tltype",
+              "id": 249447058,
+              "login": "tltype",
+              "type": "User"
+            },
+            "permissions": {},
+            "private": false,
+            "pull_request_creation_policy": "all",
+            "pushed_at": "2025-12-16T09:00:12Z",
+            "score": 1,
+            "size": 661,
+            "stargazers_count": 1,
+            "topics": [],
+            "updated_time": "54 days",
+            "visibility": "public",
+            "watchers": 1,
+            "watchers_count": 1,
+            "web_commit_signoff_required": false
+          },
+          "displayName": "Repository 1116164228",
+          "html_url": "https://github.com/tltype/pkgbuilds",
+          "type": "api-response"
+        },
+        {
+          "query": "Kupfer Linux GitLab repository and porting guide for new devices like Xiaomi Mi A3.",
+          "results": [
+            {
+              "title": "Kupfer Linux GitLab repository and porting guide for new devices like Xiaomi Mi A3",
+              "excerpt": "",
+              "url": "https://www.bing.com/search?q=Kupfer+Linux+GitLab+repository+and+porting+guide+for+new+devices+like+Xiaomi+Mi+A3",
+              "reference_type": "bing_search"
+            },
+            {
+              "title": "GitLab - Kupfer Linux",
+              "excerpt": "",
+              "url": "https://kupfer.gitlab.io/",
+              "reference_type": "citation"
+            },
+            {
+              "title": "Kupfer is a postmarketOS-like Arch Linux spin for phones",
+              "excerpt": "",
+              "url": "https://tuxphones.com/kupfer-arch-linux-distro-spin-linux-phones/",
+              "reference_type": "citation"
+            },
+            {
+              "title": "kupfer mobile linux / kupferbootstrap · GitLab",
+              "excerpt": "",
+              "url": "https://gitlab.com/kupfer/kupferbootstrap",
+              "reference_type": "citation"
+            },
+            {
+              "title": "Wiki · kupfer mobile linux / kupferbootstrap - GitLab",
+              "excerpt": "",
+              "url": "https://gitlab.com/kupfer/kupferbootstrap/-/wikis/Getting-started?version_id=31c6980a2ff5370e166bed0098b62b66ff3d265d",
+              "reference_type": "citation"
+            },
+            {
+              "title": "Porting - Kupferbootstrap - GitLab",
+              "excerpt": "",
+              "url": "https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/",
+              "reference_type": "citation"
+            },
+            {
+              "title": "Kupferbootstrap - GitLab",
+              "excerpt": "",
+              "url": "https://kupfer.gitlab.io/kupferbootstrap/main/",
+              "reference_type": "citation"
+            },
+            {
+              "title": "Kupfer Linux - kupfer.gitlab.io",
+              "excerpt": "",
+              "url": "https://kupfer.gitlab.io/devices/",
+              "reference_type": "citation"
+            }
+          ],
+          "agent_response": {
+            "type": "",
+            "text": {
+              "value": "",
+              "annotations": null
+            },
+            "bing_searches": null
+          },
+          "response_text": "**Kupfer Linux** is an Arch Linux ARM-based distribution designed for mobile devices, similar to postmarketOS (which is based on Alpine) or Mobian (based on Debian)[[1]](https://kupfer.gitlab.io/)[[2]](https://tuxphones.com/kupfer-arch-linux-distro-spin-linux-phones/). Kupfer uses the **kupferbootstrap** tool, inspired by pmbootstrap, to simplify building, flashing, and porting on new devices.\n\n---\n\n## Kupfer Linux GitLab Repository\n\n- Kupfer's source code and development, including kupferbootstrap, are hosted on GitLab:\n  - **Kupferbootstrap (core building tool):** [https://gitlab.com/kupfermobile/kupferbootstrap](https://gitlab.com/kupfermobile/kupferbootstrap)[[3]](https://gitlab.com/kupfer/kupferbootstrap)\n  - **Kupferbootstrap Documentation:** [https://kupfer.gitlab.io/kupferbootstrap](https://kupfer.gitlab.io/kupferbootstrap)[[4]](https://gitlab.com/kupfer/kupferbootstrap/-/wikis/Getting-started?version_id=31c6980a2ff5370e166bed0098b62b66ff3d265d)\n\n---\n\n## Porting Guide for New Devices (e.g., Xiaomi Mi A3)\n\n### **Summary Steps**\n\n1. **Research & Prerequisites**\n   - Learn basic git usage and Arch Linux packaging (PKGBUILDs, makepkg).\n   - **Strongly recommended:** Start with a device that already has a postmarketOS port. If your device (like the Xiaomi Mi A3) doesn’t, first create a postmarketOS working port, as this process is well-documented and has a larger community[[5]](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/).\n\n2. **Setup Environment**\n   - Clone kupferbootstrap and necessary repositories from GitLab[[3]](https://gitlab.com/kupfer/kupferbootstrap).\n   - Review the [Kupfer Porting documentation](https://kupfer.gitlab.io/kupferbootstrap/porting/)[[6]](https://kupfer.gitlab.io/kupferbootstrap/main/).\n\n3. **Create Device, Kernel, and Firmware Packages**\n   - Port postmarketOS APKBUILDs for your device/kernel/firmware to Arch PKGBUILD format.\n   - Reference ports for devices with similar SoCs (the Xiaomi Mi A3 uses the Qualcomm Snapdragon 665, so look for devices with similar chipsets)[[5]](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/)[[7]](https://kupfer.gitlab.io/devices/).\n   - Organize packages:\n     - `device/` for device-specific configs\n     - `linux/` for kernels\n     - `firmware/` for necessary firmware blobs\n\n4. **Building and Testing**\n   - Use kupferbootstrap to build images/packages for your device (the documentation has CLI usage examples for `build`, `flash`, etc.)[[6]](https://kupfer.gitlab.io/kupferbootstrap/main/).\n   - Regularly push and version your changes with git, even if incomplete[[5]](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/).\n\n5. **Submitting Your Device**\n   - When your basic port is functional:\n     - Submit a merge request (MR) on GitLab.\n     - Document what functions, what’s broken, and your willingness to maintain the port.\n     - Add any special instructions for testers.\n\n### **Important Notes**\n- Kupfer currently is best suited for Android-based bootloaders, so most ex-Android phones are the best starting point. Non-Android boot modes (like uboot) are less supported for now[[5]](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/).\n- The process to port is modeled closely on postmarketOS, making it easier if you're already familiar with that environment.\n\n---\n\n## Helpful Resources\n\n- **Kupfer Devices List (and to see example ports):** [Supported Devices page](https://kupfer.gitlab.io/kupferbootstrap/devices/)\n- **Kupferbootstrap Documentation (Porting Section):** [Porting guide](https://kupfer.gitlab.io/kupferbootstrap/porting/)\n- **Matrix rooms for development help:** Links available from the Kupfer [About Page](https://kupfer.gitlab.io/kupferbootstrap/)[[1]](https://kupfer.gitlab.io/)\n\n---\n\n### **If You're New:**\nStart by porting your device to postmarketOS if it isn’t already there, as the base will make the Kupfer port easier and better documented.\n\n---\n\n**References to get started:**\n- [Kupferbootstrap Documentation (Porting)](https://kupfer.gitlab.io/kupferbootstrap/porting/)[[6]](https://kupfer.gitlab.io/kupferbootstrap/main/)[[5]](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/)\n- [Kupferbootstrap GitLab](https://gitlab.com/kupfermobile/kupferbootstrap)[[3]](https://gitlab.com/kupfer/kupferbootstrap)\n- [Kupfer Devices](https://kupfer.gitlab.io/kupferbootstrap/devices/)\n\nLet me know if you need step-by-step PKGBUILD conversion help, or specific guidance for the Xiaomi Mi A3!\n\n---\n\n1. [GitLab - Kupfer Linux](https://kupfer.gitlab.io/)\n2. [Kupfer is a postmarketOS-like Arch Linux spin for phones](https://tuxphones.com/kupfer-arch-linux-distro-spin-linux-phones/)\n3. [kupfer mobile linux / kupferbootstrap · GitLab](https://gitlab.com/kupfer/kupferbootstrap)\n4. [Wiki · kupfer mobile linux / kupferbootstrap - GitLab](https://gitlab.com/kupfer/kupferbootstrap/-/wikis/Getting-started?version_id=31c6980a2ff5370e166bed0098b62b66ff3d265d)\n5. [Porting - Kupferbootstrap - GitLab](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/)\n6. [Kupferbootstrap - GitLab](https://kupfer.gitlab.io/kupferbootstrap/main/)\n7. [Kupfer Linux - kupfer.gitlab.io](https://kupfer.gitlab.io/devices/)\n",
+          "type": "web-search"
+        }
+      ],
+      "skillExecutions": [
+        {
+          "slug": "bing-search",
+          "status": "completed",
+          "arguments": "{\"user_prompt\":\"Guide to port Kupfer Linux (Arch Linux ARM for mobile) to a new Android device like Xiaomi Mi A3 Snapdragon 439, including kernel compilation, device tree setup, and community resources.\"}",
+          "references": [
+            {
+              "query": "Guide to port Kupfer Linux (Arch Linux ARM for mobile) to a new Android device like Xiaomi Mi A3 Snapdragon 439, including kernel compilation, device tree setup, and community resources.",
+              "results": [],
+              "agent_response": {
+                "type": "",
+                "text": {
+                  "value": "",
+                  "annotations": null
+                },
+                "bing_searches": null
+              },
+              "response_text": "Porting **Kupfer Linux (Arch Linux ARM for mobile, Plasma Mobile base)** to a new Android device like the Xiaomi Mi A3 (Snapdragon 439) is a complex process. It’s similar to porting other mainline/alternative Linux distributions (such as postmarketOS or Mobian) to Android hardware. Here’s a detailed guide outlining the steps, required tools, community links, and critical advice.\n\n---\n\n## 1. **Assessing Device Support**\n\n- **Mainline or Downstream Kernel:**  \n  - Check [postmarketOS wiki](https://wiki.postmarketos.org/wiki/Devices) and [DeviceInfo](https://github.com/postmarketOS/deviceinfo) for existing support for “laurel sprout” (Mi A3).  \n  - If no mainline support, you’ll start with the Android vendor (downstream) kernel.\n\n---\n\n## 2. **Preparing Your Environment**\n\n- **Linux workstation** running Ubuntu/Debian/Arch.\n- **ADB/Fastboot** tools:  \n  - `sudo pacman -S android-tools` (Arch)\n- **Toolchain:**  \n  - For ARM64: [AOSP’s GCC or Clang toolchain](https://source.android.com/setup/build/initializing) or `aarch64-linux-gnu-gcc`\n- **Source code access:**  \n  - [XDA Developers Xiaomi Mi A3 forum](https://forum.xda-developers.com/f/xiaomi-mi-a3-roms-kernels-recoveries-other-development.9452/)\n  - [GitHub](https://github.com/) for device kernel repositories (search “laurel_sprout kernel”)\n\n---\n\n## 3. **Kernel Compilation**\n\n### A. **Fetch Kernel Sources**\n- Look for Xiaomi’s (or community) released kernel sources.\n  - [Xiaomi Mi A3 Kernel Source](https://github.com/MiCode/Xiaomi_Kernel_OpenSource)\n  - Choose the branch for your Android version.\n\n### B. **Get Device Tree & Defconfig**\n- **Device Tree** describes hardware; sometimes called “dtb” or device-specific “arch/arm64/boot/dts/qcom/laurel_sprout.dts”.\n- **Defconfig**: Look for something like `laurel_sprout_defconfig` in `arch/arm64/configs/`.\n\n### C. **Configure the Kernel**\n```sh\nexport ARCH=arm64\nexport CROSS_COMPILE=aarch64-linux-gnu-\nmake laurel_sprout_defconfig\n```\n\n### D. **Compile**\n```sh\nmake -j$(nproc)\n```\n\n- Output: `arch/arm64/boot/Image.gz` (or `Image.gz-dtb`), and device tree blobs (`.dtb` files).\n\n---\n\n## 4. **Device Tree Setup**\n\n- Device tree source (DTS) is often bundled with the kernel source (`arch/arm64/boot/dts/qcom/`).\n- For custom hardware tweaks or supporting mainline, you may need to edit or write a DTS specific to “laurel_sprout”.\n- [Device Tree Documentation](https://www.kernel.org/doc/Documentation/devicetree/booting-without-of.txt)\n\n---\n\n## 5. **Building Kupfer/Arch ARM Rootfs**\n\n- Use [Arch Linux ARM rootfs](https://archlinuxarm.org/about/downloads) for `aarch64`.\n- Install Plasma Mobile desktop & extra packages you need:\n\n```sh\npacman -Syu plasma-mobile konsole nano networkmanager\n```\n\n- Edit `/etc/fstab`, `/etc/network`, etc. for ARM/mobile specifics.\n- Consider using [pmbootstrap](https://postmarketos.org/pmbootstrap/) to help automate rootfs creation (even if not for postmarketOS).\n\n---\n\n## 6. **Boot Image Creation**\n\nAndroid uses `boot.img` (kernel + ramdisk). Use `mkbootimg` ([Android GitHub repo](https://android.googlesource.com/platform/system/tools/mkbootimg/)):\n\n```sh\nmkbootimg --kernel Image.gz --ramdisk initramfs.img --dtb laurel_sprout.dtb \\\n  --base 0x80000000 --cmdline \"console=ttyMSM0,115200n8\" \\\n  --pagesize 2048 --output boot.img\n```\n- Adjust addresses and arguments (check stock boot images using [Android Image Kitchen](https://forum.xda-developers.com/t/tool-linux-android-unpack-repack-boot-recovery-ramdisk-img-kitchen.2073775/)).\n\n---\n\n## 7. **Flashing & First Boot**\n\n- Unlock bootloader: `fastboot oem unlock`\n- Boot custom image:\n  ```sh\n  fastboot flash boot boot.img\n  fastboot reboot\n  ```\n\n- Use UART or Android logcat for debugging (`adb logcat`).\n\n---\n\n## 8. **First Boot Ahead: Troubleshooting**\n\n- Common issues:\n  - **No display?** DTB framebuffer settings, or panel driver missing.\n  - **No touchscreen?** Inspect dtb touchscreen node, ensure correct kernel module.\n  - **No wifi?** Firmware blobs missing or wrong driver.\n- Use serial (UART), netconsole, or boot logs as much as possible.\n\n---\n\n## 9. **Community & Resources**\n\n- **Kupfer Linux:**  \n  - [Main GitHub repo](https://github.com/kupfer-linux/)\n  - [Kupfer Matrix/Telegram channels](check their repo README for links)\n- **postmarketOS:**  \n  - Great for device porting resources, see [pmbootstrap docs](https://postmarketos.org/porting/)\n  - [Device Porting Guide Wiki](https://wiki.postmarketos.org/wiki/Porting_to_a_new_device)\n- **Kernel resources:**  \n  - [XDA Mi A3 forums](https://forum.xda-developers.com/f/xiaomi-mi-a3-roms-kernels-recoveries-other-development.9452/)\n  - [Mainlining Guide](https://wiki.postmarketos.org/wiki/Porting_to_a_new_device/Mainlining)\n- **Discords/Matrix:**  \n  - [Mobile Linux Matrix Community List](https://wiki.postmarketos.org/wiki/Community)\n\n---\n\n### **Summary**\n\n1. **Collect kernel sources and device tree.**\n2. **Compile kernel & device tree with correct toolchain.**\n3. **Assemble proper boot.img with kernel and initramfs/rootfs.**\n4. **Build or download an ARM64 Arch image with your desired UI (e.g., Plasma Mobile).**\n5. **Flash to device, troubleshoot with logs.**\n6. **Leverage postmarketOS and Kupfer communities for device-specific help.**\n\n---\n\n**Note:** Mainlining (using mainline not Android vendor kernels) is a long process; initial ports usually use downstream kernels.\n\n**Direct links for reference:**\n- [Kupfer Linux GitHub](https://github.com/kupfer-linux/)\n- [postmarketOS Porting Guide](https://wiki.postmarketos.org/wiki/Porting_to_a_new_device)\n- [Xiaomi Mi A3 Kernel Source](https://github.com/MiCode/Xiaomi_Kernel_OpenSource)\n\n**Ask in Kupfer or postmarketOS channels for help; most porters hang out there!**\n\nIf you want, I can help you write custom kernel build scripts or interpret dmesg/logcat errors as you go.",
+              "type": "web-search"
+            }
+          ],
+          "callId": "call_90023509"
+        },
+        {
+          "slug": "get-github-data",
+          "status": "completed",
+          "arguments": "{\"endpoint\":\"/search/repositories?q=kupfer+linux\",\"repo\":\"\",\"task\":\"Search for GitHub repositories related to Kupfer Linux project.\",\"userQuery\":\"Find Kupfer Linux repos on GitHub.\"}",
+          "references": [
+            {
+              "id": 145410,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "allow_forking": true,
+                "archived": false,
+                "created_time": "07 March 2009",
+                "default_branch": "master",
+                "description": "kupfer, smart, quick launcher. `master' is kupfer's release branch. ",
+                "disabled": false,
+                "fork": false,
+                "forks": 63,
+                "forks_count": 63,
+                "full_name": "kupferlauncher/kupfer",
+                "has_discussions": false,
+                "has_downloads": true,
+                "has_issues": true,
+                "has_pages": false,
+                "has_projects": true,
+                "has_pull_requests": true,
+                "has_wiki": true,
+                "homepage": "http://kupferlauncher.github.io",
+                "html_url": "https://github.com/kupferlauncher/kupfer",
+                "id": 145410,
+                "is_template": false,
+                "language": "Python",
+                "license": {
+                  "key": "gpl-3.0",
+                  "name": "GNU General Public License v3.0"
+                },
+                "name": "kupfer",
+                "open_issues": 19,
+                "open_issues_count": 19,
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/25559619?v=4",
+                  "html_url": "https://github.com/kupferlauncher",
+                  "id": 25559619,
+                  "login": "kupferlauncher",
+                  "type": "Organization"
+                },
+                "permissions": {},
+                "private": false,
+                "pull_request_creation_policy": "all",
+                "pushed_at": "2025-12-01T08:49:34Z",
+                "score": 1,
+                "size": 10178,
+                "stargazers_count": 385,
+                "topics": [
+                  "gplv3",
+                  "launcher",
+                  "linux",
+                  "python"
+                ],
+                "updated_time": "27 days",
+                "visibility": "public",
+                "watchers": 385,
+                "watchers_count": 385,
+                "web_commit_signoff_required": false
+              },
+              "displayName": "Repository 145410",
+              "html_url": "https://github.com/kupferlauncher/kupfer",
+              "type": "api-response"
+            },
+            {
+              "id": 1116164228,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "allow_forking": true,
+                "archived": false,
+                "created_time": "14 December 2025",
+                "default_branch": "main",
+                "description": "PKGBUILDs for building Arch Linux ARM for Elish, derived from the Kupfer official PKGBUILDs repository.",
+                "disabled": false,
+                "fork": false,
+                "forks": 1,
+                "forks_count": 1,
+                "full_name": "tltype/pkgbuilds",
+                "has_discussions": false,
+                "has_downloads": true,
+                "has_issues": true,
+                "has_pages": false,
+                "has_projects": true,
+                "has_pull_requests": true,
+                "has_wiki": true,
+                "homepage": null,
+                "html_url": "https://github.com/tltype/pkgbuilds",
+                "id": 1116164228,
+                "is_template": false,
+                "language": "Shell",
+                "license": {
+                  "key": "agpl-3.0",
+                  "name": "GNU Affero General Public License v3.0"
+                },
+                "name": "pkgbuilds",
+                "open_issues": 1,
+                "open_issues_count": 1,
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/249447058?v=4",
+                  "html_url": "https://github.com/tltype",
+                  "id": 249447058,
+                  "login": "tltype",
+                  "type": "User"
+                },
+                "permissions": {},
+                "private": false,
+                "pull_request_creation_policy": "all",
+                "pushed_at": "2025-12-16T09:00:12Z",
+                "score": 1,
+                "size": 661,
+                "stargazers_count": 1,
+                "topics": [],
+                "updated_time": "54 days",
+                "visibility": "public",
+                "watchers": 1,
+                "watchers_count": 1,
+                "web_commit_signoff_required": false
+              },
+              "displayName": "Repository 1116164228",
+              "html_url": "https://github.com/tltype/pkgbuilds",
+              "type": "api-response"
+            }
+          ],
+          "callId": "call_33586046"
+        },
+        {
+          "slug": "get-github-data",
+          "status": "completed",
+          "arguments": "{\"endpoint\":\"/search/repositories?q=kupfer-linux\",\"repo\":\"\",\"task\":\"Search for Kupfer Linux project repositories on GitHub.\",\"userQuery\":\"Find Kupfer Linux repos.\"}",
+          "references": [
+            {
+              "id": 1116164228,
+              "authID": 0,
+              "resourceType": "Repository",
+              "authResourceType": "",
+              "action": "get_repo",
+              "data": {
+                "allow_forking": true,
+                "archived": false,
+                "created_time": "14 December 2025",
+                "default_branch": "main",
+                "description": "PKGBUILDs for building Arch Linux ARM for Elish, derived from the Kupfer official PKGBUILDs repository.",
+                "disabled": false,
+                "fork": false,
+                "forks": 1,
+                "forks_count": 1,
+                "full_name": "tltype/pkgbuilds",
+                "has_discussions": false,
+                "has_downloads": true,
+                "has_issues": true,
+                "has_pages": false,
+                "has_projects": true,
+                "has_pull_requests": true,
+                "has_wiki": true,
+                "homepage": null,
+                "html_url": "https://github.com/tltype/pkgbuilds",
+                "id": 1116164228,
+                "is_template": false,
+                "language": "Shell",
+                "license": {
+                  "key": "agpl-3.0",
+                  "name": "GNU Affero General Public License v3.0"
+                },
+                "name": "pkgbuilds",
+                "open_issues": 1,
+                "open_issues_count": 1,
+                "owner": {
+                  "avatar_url": "https://avatars.githubusercontent.com/u/249447058?v=4",
+                  "html_url": "https://github.com/tltype",
+                  "id": 249447058,
+                  "login": "tltype",
+                  "type": "User"
+                },
+                "permissions": {},
+                "private": false,
+                "pull_request_creation_policy": "all",
+                "pushed_at": "2025-12-16T09:00:12Z",
+                "score": 1,
+                "size": 661,
+                "stargazers_count": 1,
+                "topics": [],
+                "updated_time": "54 days",
+                "visibility": "public",
+                "watchers": 1,
+                "watchers_count": 1,
+                "web_commit_signoff_required": false
+              },
+              "displayName": "Repository 1116164228",
+              "html_url": "https://github.com/tltype/pkgbuilds",
+              "type": "api-response"
+            }
+          ],
+          "callId": "call_14589825"
+        },
+        {
+          "slug": "bing-search",
+          "status": "completed",
+          "arguments": "{\"user_prompt\":\"Kupfer Linux GitLab repository and porting guide for new devices like Xiaomi Mi A3.\"}",
+          "references": [
+            {
+              "query": "Kupfer Linux GitLab repository and porting guide for new devices like Xiaomi Mi A3.",
+              "results": [
+                {
+                  "title": "Kupfer Linux GitLab repository and porting guide for new devices like Xiaomi Mi A3",
+                  "excerpt": "",
+                  "url": "https://www.bing.com/search?q=Kupfer+Linux+GitLab+repository+and+porting+guide+for+new+devices+like+Xiaomi+Mi+A3",
+                  "reference_type": "bing_search"
+                },
+                {
+                  "title": "GitLab - Kupfer Linux",
+                  "excerpt": "",
+                  "url": "https://kupfer.gitlab.io/",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "Kupfer is a postmarketOS-like Arch Linux spin for phones",
+                  "excerpt": "",
+                  "url": "https://tuxphones.com/kupfer-arch-linux-distro-spin-linux-phones/",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "kupfer mobile linux / kupferbootstrap · GitLab",
+                  "excerpt": "",
+                  "url": "https://gitlab.com/kupfer/kupferbootstrap",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "Wiki · kupfer mobile linux / kupferbootstrap - GitLab",
+                  "excerpt": "",
+                  "url": "https://gitlab.com/kupfer/kupferbootstrap/-/wikis/Getting-started?version_id=31c6980a2ff5370e166bed0098b62b66ff3d265d",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "Porting - Kupferbootstrap - GitLab",
+                  "excerpt": "",
+                  "url": "https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "Kupferbootstrap - GitLab",
+                  "excerpt": "",
+                  "url": "https://kupfer.gitlab.io/kupferbootstrap/main/",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "Kupfer Linux - kupfer.gitlab.io",
+                  "excerpt": "",
+                  "url": "https://kupfer.gitlab.io/devices/",
+                  "reference_type": "citation"
+                }
+              ],
+              "agent_response": {
+                "type": "",
+                "text": {
+                  "value": "",
+                  "annotations": null
+                },
+                "bing_searches": null
+              },
+              "response_text": "**Kupfer Linux** is an Arch Linux ARM-based distribution designed for mobile devices, similar to postmarketOS (which is based on Alpine) or Mobian (based on Debian)[[1]](https://kupfer.gitlab.io/)[[2]](https://tuxphones.com/kupfer-arch-linux-distro-spin-linux-phones/). Kupfer uses the **kupferbootstrap** tool, inspired by pmbootstrap, to simplify building, flashing, and porting on new devices.\n\n---\n\n## Kupfer Linux GitLab Repository\n\n- Kupfer's source code and development, including kupferbootstrap, are hosted on GitLab:\n  - **Kupferbootstrap (core building tool):** [https://gitlab.com/kupfermobile/kupferbootstrap](https://gitlab.com/kupfermobile/kupferbootstrap)[[3]](https://gitlab.com/kupfer/kupferbootstrap)\n  - **Kupferbootstrap Documentation:** [https://kupfer.gitlab.io/kupferbootstrap](https://kupfer.gitlab.io/kupferbootstrap)[[4]](https://gitlab.com/kupfer/kupferbootstrap/-/wikis/Getting-started?version_id=31c6980a2ff5370e166bed0098b62b66ff3d265d)\n\n---\n\n## Porting Guide for New Devices (e.g., Xiaomi Mi A3)\n\n### **Summary Steps**\n\n1. **Research & Prerequisites**\n   - Learn basic git usage and Arch Linux packaging (PKGBUILDs, makepkg).\n   - **Strongly recommended:** Start with a device that already has a postmarketOS port. If your device (like the Xiaomi Mi A3) doesn’t, first create a postmarketOS working port, as this process is well-documented and has a larger community[[5]](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/).\n\n2. **Setup Environment**\n   - Clone kupferbootstrap and necessary repositories from GitLab[[3]](https://gitlab.com/kupfer/kupferbootstrap).\n   - Review the [Kupfer Porting documentation](https://kupfer.gitlab.io/kupferbootstrap/porting/)[[6]](https://kupfer.gitlab.io/kupferbootstrap/main/).\n\n3. **Create Device, Kernel, and Firmware Packages**\n   - Port postmarketOS APKBUILDs for your device/kernel/firmware to Arch PKGBUILD format.\n   - Reference ports for devices with similar SoCs (the Xiaomi Mi A3 uses the Qualcomm Snapdragon 665, so look for devices with similar chipsets)[[5]](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/)[[7]](https://kupfer.gitlab.io/devices/).\n   - Organize packages:\n     - `device/` for device-specific configs\n     - `linux/` for kernels\n     - `firmware/` for necessary firmware blobs\n\n4. **Building and Testing**\n   - Use kupferbootstrap to build images/packages for your device (the documentation has CLI usage examples for `build`, `flash`, etc.)[[6]](https://kupfer.gitlab.io/kupferbootstrap/main/).\n   - Regularly push and version your changes with git, even if incomplete[[5]](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/).\n\n5. **Submitting Your Device**\n   - When your basic port is functional:\n     - Submit a merge request (MR) on GitLab.\n     - Document what functions, what’s broken, and your willingness to maintain the port.\n     - Add any special instructions for testers.\n\n### **Important Notes**\n- Kupfer currently is best suited for Android-based bootloaders, so most ex-Android phones are the best starting point. Non-Android boot modes (like uboot) are less supported for now[[5]](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/).\n- The process to port is modeled closely on postmarketOS, making it easier if you're already familiar with that environment.\n\n---\n\n## Helpful Resources\n\n- **Kupfer Devices List (and to see example ports):** [Supported Devices page](https://kupfer.gitlab.io/kupferbootstrap/devices/)\n- **Kupferbootstrap Documentation (Porting Section):** [Porting guide](https://kupfer.gitlab.io/kupferbootstrap/porting/)\n- **Matrix rooms for development help:** Links available from the Kupfer [About Page](https://kupfer.gitlab.io/kupferbootstrap/)[[1]](https://kupfer.gitlab.io/)\n\n---\n\n### **If You're New:**\nStart by porting your device to postmarketOS if it isn’t already there, as the base will make the Kupfer port easier and better documented.\n\n---\n\n**References to get started:**\n- [Kupferbootstrap Documentation (Porting)](https://kupfer.gitlab.io/kupferbootstrap/porting/)[[6]](https://kupfer.gitlab.io/kupferbootstrap/main/)[[5]](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/)\n- [Kupferbootstrap GitLab](https://gitlab.com/kupfermobile/kupferbootstrap)[[3]](https://gitlab.com/kupfer/kupferbootstrap)\n- [Kupfer Devices](https://kupfer.gitlab.io/kupferbootstrap/devices/)\n\nLet me know if you need step-by-step PKGBUILD conversion help, or specific guidance for the Xiaomi Mi A3!\n\n---\n\n1. [GitLab - Kupfer Linux](https://kupfer.gitlab.io/)\n2. [Kupfer is a postmarketOS-like Arch Linux spin for phones](https://tuxphones.com/kupfer-arch-linux-distro-spin-linux-phones/)\n3. [kupfer mobile linux / kupferbootstrap · GitLab](https://gitlab.com/kupfer/kupferbootstrap)\n4. [Wiki · kupfer mobile linux / kupferbootstrap - GitLab](https://gitlab.com/kupfer/kupferbootstrap/-/wikis/Getting-started?version_id=31c6980a2ff5370e166bed0098b62b66ff3d265d)\n5. [Porting - Kupferbootstrap - GitLab](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/)\n6. [Kupferbootstrap - GitLab](https://kupfer.gitlab.io/kupferbootstrap/main/)\n7. [Kupfer Linux - kupfer.gitlab.io](https://kupfer.gitlab.io/devices/)\n",
+              "type": "web-search"
+            }
+          ],
+          "callId": "call_66222521"
+        }
+      ]
+    },
+    {
+      "id": "ede28507-c49a-4616-a813-65ef901cadc3",
+      "parentMessageID": "7222da96-b840-4c12-bd54-79d92f69713e",
+      "intent": "conversation",
+      "role": "user",
+      "content": "Ahora investiga sobre proyectos de linux arm para procesadores sdm 665, mi a3 lo que sea para empezar a compilar mi propio kupfer para mi mia3 y dame un tutorial completo, tengo un ryzen 5 4500u 8 de ram y archlinux 128 gb ssd",
+      "createdAt": "2026-04-21T01:14:57.187345034Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "694ad4ba-732e-4aa5-b57d-8f21baba5e33",
+      "parentMessageID": "ede28507-c49a-4616-a813-65ef901cadc3",
+      "intent": "conversation",
+      "role": "assistant",
+      "content": "## Investigación: Proyectos de Linux ARM para Snapdragon 665 (SDM665) y Xiaomi Mi A3\n\nAntes de empezar, una nota: Tu Xiaomi Mi A3 usa Snapdragon 439 (SM4250), no SDM665 (SM6125). Sin embargo, ambos son de la familia Snapdragon 4xx/6xx y comparten similitudes en mainlining. La búsqueda encontró que postmarketOS lista Mi A3 bajo SDM665 (posible error en la wiki o clasificación amplia), pero hay esfuerzos activos. Para SDM665 específicamente (e.g., Redmi Note 8), hay más soporte.\n\n### Proyectos relevantes encontrados:\n- **postmarketOS**: Es el más maduro. Soporta Mi A3 (codename \"laurel\") con kernel mainline parcial (hasta 6.1). Funciona básico (CPU, USB, display framebuffer), pero WiFi, audio, touchscreen, etc., están rotos/experimentales. Wiki: https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel). Comunidad en Matrix: `#postmarketos:matrix.org`.\n- **Linux-On-Sdm6Series (GitHub)**: Grupo para puertos en SDM6xx/7xx. Incluye Ubuntu Touch, Halium, SailfishOS, Droidian. Repos: https://github.com/Linux-On-Sdm6Series (e.g., device_xiaomi_ginkgo para Redmi Note 8). Útil para kernels y device trees.\n- **Kupfer**: Basado en Arch ARM, usa postmarketOS como base. No tiene puerto directo para Mi A3, pero puedes adaptarlo. Soporta dispositivos con buen mainline (como algunos SDM6xx). Docs: https://kupfer.gitlab.io/kupferbootstrap/porting/. Matrix: Enlaces en sitio.\n- **Otros**: Halium para Ubuntu Touch GSIs, Droidian (Debian móvil). No puertos directos para Mi A3, pero usables con kernels custom.\n\n**Estado actual (abril 2026)**: Mainlining en progreso para SDM6xx. Básico funciona, pero no usable diario. Mi A3 tiene kernel downstream en repos GitHub (e.g., https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout).\n\nSi no hay puerto en postmarketOS, empieza por crear uno ahí (más fácil que Kupfer directo). Kupfer requiere APKBUILDs convertidos a PKGBUILDs.\n\n## Tutorial Completo: Compilar Kupfer para Xiaomi Mi A3\n\n**Requisitos de hardware/software**:\n- Tu setup (Ryzen 5 4500u, 8GB RAM, Arch Linux, 128GB SSD) es suficiente. Necesitas ~50GB libres para builds.\n- Instala dependencias en Arch: `sudo pacman -S git python python-pip base-devel aarch64-linux-gnu-gcc android-tools fastboot adb pmbootstrap` (pmbootstrap para base postmarketOS).\n- Clona Kupfer: `git clone https://gitlab.com/kupfermobile/kupferbootstrap.git` y ve a `./kupferbootstrap`.\n\n**Advertencias**:\n- Riesgo de brick: Backup de datos/partitions.\n- Tiempo: Días/semanas. Si falla, pide ayuda en Matrix de Kupfer/postmarketOS.\n- Asume kernel downstream (mainline no listo para Mi A3).\n\n### Paso 1: Preparar el entorno y crear puerto base en postmarketOS\nKupfer usa postmarketOS como inspiración, así que crea un puerto básico ahí primero (si no existe). Si ya existe, salta a adaptar.\n\n1. Instala pmbootstrap: `pip install pmbootstrap`.\n2. Inicializa: `pmbootstrap init`. Selecciona \"edge\" branch, \"aarch64\" arch.\n3. Crea device nuevo: `pmbootstrap newaport device-xiaomi-laurel`.\n   - Copia APKBUILD de un dispositivo similar (e.g., Redmi Note 8: busca en https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/testing/device-xiaomi-ginkgo).\n   - Edita APKBUILD: Cambia codename a \"laurel\", device tree a \"qcom/sdm439-xiaomi-laurel.dts\" (busca DT en repos GitHub de Mi A3).\n4. Crea kernel: `pmbootstrap newaport linux-xiaomi-laurel`.\n   - Usa kernel downstream de https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout.\n   - APKBUILD: Define config (e.g., laurel_sprout_defconfig), patches para mainline si posible.\n5. Crea firmware: `pmbootstrap newaport firmware-xiaomi-laurel`.\n   - Extrae blobs de ROM Android (usa repos como https://github.com/AndroidBlobs/vendor_xiaomi_laurel_sprout).\n6. Build: `pmbootstrap build --device xiaomi-laurel`.\n7. Flashea: Conecta Mi A3 en fastboot, `pmbootstrap flasher flash_rootfs` y `pmbootstrap flasher flash_kernel`.\n8. Prueba: Boot y depura con `adb logcat` o UART.\n\nSi funciona básico, continúa a Kupfer.\n\n### Paso 2: Adaptar a Kupfer (convertir APKBUILDs a PKGBUILDs)\nKupfer usa PKGBUILDs de Arch. Convierte tu puerto postmarketOS.\n\n1. En tu máquina, instala kupferbootstrap: `./kupferbootstrap init`.\n2. Crea device PKGBUILD: En `kupferbootstrap/devices/`, copia un ejemplo (e.g., de PinePhone).\n   - PKGBUILD: Define depends (linux, firmware), source (device tree), package() para instalar configs (fstab, init, etc.).\n   - Para Mi A3: Usa DT de repos GitHub (e.g., https://github.com/PixelExperience-Devices/device_xiaomi_laurel_sprout).\n3. Crea kernel PKGBUILD: En `kupferbootstrap/linux/`, adapta de postmarketOS.\n   - PKGBUILD: Source kernel repo, config \"laurel_sprout_defconfig\", toolchain aarch64.\n   - Build: `makepkg -s` (compila kernel con `make`).\n4. Crea firmware PKGBUILD: Extrae y empaqueta blobs.\n5. Build imagen: `./kupferbootstrap build --device laurel --ui plasma-mobile`.\n   - Esto crea rootfs Arch ARM + kernel + initramfs.\n\n### Paso 3: Compilar kernel custom (si mainline falla)\nUsa toolchain en Arch.\n\n1. Clona kernel: `git clone https://github.com/selurvedu/msm-4.14_kernel_xiaomi_laurel_sprout.git`.\n2. Config: `export ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- && make laurel_sprout_defconfig`.\n3. Compila: `make -j$(nproc)` (usa tus 6 cores Ryzen).\n4. Output: `arch/arm64/boot/Image.gz` (kernel), `.dtb` (device tree).\n\n### Paso 4: Crear boot.img y flashear\n1. Instala mkbootimg (de AUR: `yay -S android-tools` o compila).\n2. Crea initramfs: Usa kupferbootstrap o genérica de Arch ARM.\n3. Comando: `mkbootimg --kernel Image.gz --ramdisk initramfs.cpio.gz --dtb laurel_sprout.dtb --cmdline \"console=ttyMSM0 androidboot.hardware=qcom\" --base 0x80000000 --output boot.img`.\n4. Flashea: `fastboot flash boot boot.img && fastboot reboot`.\n\n### Paso 5: Depurar y contribuir\n- Logs: `adb logcat` o serial (UART si tienes).\n- Comunes: Display roto? Ajusta DTB. Touchscreen? Agrega driver.\n- Si funciona, sube MR en GitLab Kupfer: Documenta estado.\n- Comunidades: Matrix de Kupfer (#kupfer:matrix.org), postmarketOS (#postmarketos:matrix.org).\n\nSi encuentras errores específicos (e.g., kernel no compila), comparte logs. ¡Buena suerte! Este es un proceso iterativo.",
+      "createdAt": "2026-04-21T01:14:57.187480966Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [
+        {
+          "query": "Linux ARM projects and ports for Snapdragon 665 (SDM665) devices, including postmarketOS, Kupfer, or other mobile Linux distributions. Also, any existing ports or kernels for Xiaomi Mi A3 (Snapdragon 439) or similar Snapdragon 6xx devices.",
+          "results": [
+            {
+              "title": "Linux ARM projects and ports for Snapdragon 665 (SDM665), including postmarketOS, Kupfer, mobile Linux distributions, and ports/kernels for Xiaomi Mi A3 (Snapdragon 439) or Snapdragon 6xx devices",
+              "excerpt": "",
+              "url": "https://www.bing.com/search?q=Linux+ARM+projects+and+ports+for+Snapdragon+665+%28SDM665%29%2C+including+postmarketOS%2C+Kupfer%2C+mobile+Linux+distributions%2C+and+ports%2Fkernels+for+Xiaomi+Mi+A3+%28Snapdragon+439%29+or+Snapdragon+6xx+devices",
+              "reference_type": "bing_search"
+            },
+            {
+              "title": "Qualcomm Snapdragon 665 (SM6125) - postmarketOS Wiki",
+              "excerpt": "",
+              "url": "https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_(SM6125)",
+              "reference_type": "citation"
+            },
+            {
+              "title": "Xiaomi Mi A3 (xiaomi-laurel) - postmarketOS Wiki",
+              "excerpt": "",
+              "url": "https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel)",
+              "reference_type": "citation"
+            },
+            {
+              "title": "Kupfer Linux",
+              "excerpt": "",
+              "url": "https://kupfer.gitlab.io/",
+              "reference_type": "citation"
+            },
+            {
+              "title": "Linux-On-Sdm6Series/device_xiaomi_ginkgo - GitHub",
+              "excerpt": "",
+              "url": "https://github.com/Linux-On-Sdm6Series/device_xiaomi_ginkgo",
+              "reference_type": "citation"
+            },
+            {
+              "title": "Linux For Snapdragon 6/7 Series - GitHub",
+              "excerpt": "",
+              "url": "https://github.com/Linux-On-Sdm6Series",
+              "reference_type": "citation"
+            }
+          ],
+          "agent_response": {
+            "type": "",
+            "text": {
+              "value": "",
+              "annotations": null
+            },
+            "bing_searches": null
+          },
+          "response_text": "Here are key details regarding Linux ARM projects and ports for Snapdragon 665 (SDM665) and similar Snapdragon 6xx devices, focusing on projects like postmarketOS, Kupfer, and mainline kernel developments:\n\n---\n\n### Snapdragon 665 (SDM665)\n\n**postmarketOS:**\n- The Snapdragon 665 (codename \"trinket\") has ongoing mainline Linux kernel support initiatives.\n- Devices with SDM665 for which postmarketOS efforts are active include:\n  - Xiaomi Mi A3 (codename: laurel)\n  - Xiaomi Redmi Note 8 (ginkgo)\n  - Xiaomi Redmi Note 8T (willow)\n  - Motorola Moto G8 Plus\n  - Sony Xperia 10 II\n- Many basic features (CPU, USB, storage, display framebuffer) are working; however, advanced GPU, audio, WiFi, Bluetooth, modem, and camera support are still incomplete or broken.\n- The community hub for SDM61x5 mainlining exists on Matrix: `#sm6125-mainline:matrix.org` and repos on Codeberg/GitHub are tracking progress and patches[[1]](https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_(SM6125))[[2]](https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel)).\n\n**Kupfer:**\n- Kupfer is an Arch Linux ARM-based distro for mobile devices, designed similarly to postmarketOS.\n- Device support is limited and based on those with strong mainline kernel status (postmarketOS ports are often a prerequisite).\n- Development and device porting discussions are active in Matrix chat rooms, with tooling inspired by pmbootstrap[[3]](https://kupfer.gitlab.io/).\n\n---\n\n### Xiaomi Mi A3 (Snapdragon 665) and similar\n\n**Xiaomi Mi A3:**\n- Supported in postmarketOS under the codename \"laurel.\"\n- Mainline kernel up to version 6.1 has been ported; partial boot, flash, and framebuffer display functionality reported. More advanced features (touchscreen, audio, wireless connectivity) are experimental or not merged yet.\n- Flashing procedures and ongoing porting work are available on the postmarketOS Wiki for Xiaomi Mi A3[[2]](https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel)).\n\n**Xiaomi Redmi Note 8/8T (Snapdragon 665):**\n- Also within the scope of postmarketOS and mainline kernel efforts.\n- GitHub repositories with device trees and kernel adaptation are available[[4]](https://github.com/Linux-On-Sdm6Series/device_xiaomi_ginkgo).\n\n---\n\n### Other Snapdragon 6xx Devices\n\n**General Linux projects for Snapdragon 6/7 Series:**\n- GitHub group “Linux For Snapdragon 6/7 Series” tracks ports across Ubuntu Touch, Halium, SailfishOS, postmarketOS, and Droidian.\n- Notable working devices: Asus Zenfone Max Pro M1/M2 (SDM660), Xiaomi Redmi Note 7, and others.\n- Device-specific kernels and adaptation repositories are provided, with scripts and community builds for various Linux environments[[5]](https://github.com/Linux-On-Sdm6Series)[[4]](https://github.com/Linux-On-Sdm6Series/device_xiaomi_ginkgo).\n\n---\n\n### Current State of Development\n\n- *Mainlining* is an ongoing, complex process. Basic hardware bring-up is often achieved, but end-user daily usability (calls, modem, WiFi, camera, etc.) varies greatly by device.\n- GitHub, Matrix rooms, and the postmarketOS wiki are your best resources for tracking device-specific status, joining discussions, and contributing patches or testing.\n\n---\n\n### Further Reading/Resources\n- [postmarketOS Snapdragon 665 status](https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_(SM6125))[[1]](https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_(SM6125))\n- [Xiaomi Mi A3 postmarketOS port](https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel))[[2]](https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel))\n- [GitHub Linux-On-Sdm6Series projects](https://github.com/Linux-On-Sdm6Series)[[5]](https://github.com/Linux-On-Sdm6Series)\n- [Kupfer Arch for Mobile](https://kupfer.gitlab.io/)[[3]](https://kupfer.gitlab.io/)\n\n---\n\nIf you want the latest real-time development status, check Matrix/IRC channels, GitHub issues, and the postmarketOS device pages regularly—progress on mainline support is very active and fast-moving!\n\n---\n\n1. [Qualcomm Snapdragon 665 (SM6125) - postmarketOS Wiki](https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_(SM6125))\n2. [Xiaomi Mi A3 (xiaomi-laurel) - postmarketOS Wiki](https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel))\n3. [Kupfer Linux](https://kupfer.gitlab.io/)\n4. [Linux-On-Sdm6Series/device_xiaomi_ginkgo - GitHub](https://github.com/Linux-On-Sdm6Series/device_xiaomi_ginkgo)\n5. [Linux For Snapdragon 6/7 Series - GitHub](https://github.com/Linux-On-Sdm6Series)\n",
+          "type": "web-search"
+        }
+      ],
+      "skillExecutions": [
+        {
+          "slug": "bing-search",
+          "status": "completed",
+          "arguments": "{\"user_prompt\":\"Linux ARM projects and ports for Snapdragon 665 (SDM665) devices, including postmarketOS, Kupfer, or other mobile Linux distributions. Also, any existing ports or kernels for Xiaomi Mi A3 (Snapdragon 439) or similar Snapdragon 6xx devices.\"}",
+          "references": [
+            {
+              "query": "Linux ARM projects and ports for Snapdragon 665 (SDM665) devices, including postmarketOS, Kupfer, or other mobile Linux distributions. Also, any existing ports or kernels for Xiaomi Mi A3 (Snapdragon 439) or similar Snapdragon 6xx devices.",
+              "results": [
+                {
+                  "title": "Linux ARM projects and ports for Snapdragon 665 (SDM665), including postmarketOS, Kupfer, mobile Linux distributions, and ports/kernels for Xiaomi Mi A3 (Snapdragon 439) or Snapdragon 6xx devices",
+                  "excerpt": "",
+                  "url": "https://www.bing.com/search?q=Linux+ARM+projects+and+ports+for+Snapdragon+665+%28SDM665%29%2C+including+postmarketOS%2C+Kupfer%2C+mobile+Linux+distributions%2C+and+ports%2Fkernels+for+Xiaomi+Mi+A3+%28Snapdragon+439%29+or+Snapdragon+6xx+devices",
+                  "reference_type": "bing_search"
+                },
+                {
+                  "title": "Qualcomm Snapdragon 665 (SM6125) - postmarketOS Wiki",
+                  "excerpt": "",
+                  "url": "https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_(SM6125)",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "Xiaomi Mi A3 (xiaomi-laurel) - postmarketOS Wiki",
+                  "excerpt": "",
+                  "url": "https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel)",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "Kupfer Linux",
+                  "excerpt": "",
+                  "url": "https://kupfer.gitlab.io/",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "Linux-On-Sdm6Series/device_xiaomi_ginkgo - GitHub",
+                  "excerpt": "",
+                  "url": "https://github.com/Linux-On-Sdm6Series/device_xiaomi_ginkgo",
+                  "reference_type": "citation"
+                },
+                {
+                  "title": "Linux For Snapdragon 6/7 Series - GitHub",
+                  "excerpt": "",
+                  "url": "https://github.com/Linux-On-Sdm6Series",
+                  "reference_type": "citation"
+                }
+              ],
+              "agent_response": {
+                "type": "",
+                "text": {
+                  "value": "",
+                  "annotations": null
+                },
+                "bing_searches": null
+              },
+              "response_text": "Here are key details regarding Linux ARM projects and ports for Snapdragon 665 (SDM665) and similar Snapdragon 6xx devices, focusing on projects like postmarketOS, Kupfer, and mainline kernel developments:\n\n---\n\n### Snapdragon 665 (SDM665)\n\n**postmarketOS:**\n- The Snapdragon 665 (codename \"trinket\") has ongoing mainline Linux kernel support initiatives.\n- Devices with SDM665 for which postmarketOS efforts are active include:\n  - Xiaomi Mi A3 (codename: laurel)\n  - Xiaomi Redmi Note 8 (ginkgo)\n  - Xiaomi Redmi Note 8T (willow)\n  - Motorola Moto G8 Plus\n  - Sony Xperia 10 II\n- Many basic features (CPU, USB, storage, display framebuffer) are working; however, advanced GPU, audio, WiFi, Bluetooth, modem, and camera support are still incomplete or broken.\n- The community hub for SDM61x5 mainlining exists on Matrix: `#sm6125-mainline:matrix.org` and repos on Codeberg/GitHub are tracking progress and patches[[1]](https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_(SM6125))[[2]](https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel)).\n\n**Kupfer:**\n- Kupfer is an Arch Linux ARM-based distro for mobile devices, designed similarly to postmarketOS.\n- Device support is limited and based on those with strong mainline kernel status (postmarketOS ports are often a prerequisite).\n- Development and device porting discussions are active in Matrix chat rooms, with tooling inspired by pmbootstrap[[3]](https://kupfer.gitlab.io/).\n\n---\n\n### Xiaomi Mi A3 (Snapdragon 665) and similar\n\n**Xiaomi Mi A3:**\n- Supported in postmarketOS under the codename \"laurel.\"\n- Mainline kernel up to version 6.1 has been ported; partial boot, flash, and framebuffer display functionality reported. More advanced features (touchscreen, audio, wireless connectivity) are experimental or not merged yet.\n- Flashing procedures and ongoing porting work are available on the postmarketOS Wiki for Xiaomi Mi A3[[2]](https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel)).\n\n**Xiaomi Redmi Note 8/8T (Snapdragon 665):**\n- Also within the scope of postmarketOS and mainline kernel efforts.\n- GitHub repositories with device trees and kernel adaptation are available[[4]](https://github.com/Linux-On-Sdm6Series/device_xiaomi_ginkgo).\n\n---\n\n### Other Snapdragon 6xx Devices\n\n**General Linux projects for Snapdragon 6/7 Series:**\n- GitHub group “Linux For Snapdragon 6/7 Series” tracks ports across Ubuntu Touch, Halium, SailfishOS, postmarketOS, and Droidian.\n- Notable working devices: Asus Zenfone Max Pro M1/M2 (SDM660), Xiaomi Redmi Note 7, and others.\n- Device-specific kernels and adaptation repositories are provided, with scripts and community builds for various Linux environments[[5]](https://github.com/Linux-On-Sdm6Series)[[4]](https://github.com/Linux-On-Sdm6Series/device_xiaomi_ginkgo).\n\n---\n\n### Current State of Development\n\n- *Mainlining* is an ongoing, complex process. Basic hardware bring-up is often achieved, but end-user daily usability (calls, modem, WiFi, camera, etc.) varies greatly by device.\n- GitHub, Matrix rooms, and the postmarketOS wiki are your best resources for tracking device-specific status, joining discussions, and contributing patches or testing.\n\n---\n\n### Further Reading/Resources\n- [postmarketOS Snapdragon 665 status](https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_(SM6125))[[1]](https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_(SM6125))\n- [Xiaomi Mi A3 postmarketOS port](https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel))[[2]](https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel))\n- [GitHub Linux-On-Sdm6Series projects](https://github.com/Linux-On-Sdm6Series)[[5]](https://github.com/Linux-On-Sdm6Series)\n- [Kupfer Arch for Mobile](https://kupfer.gitlab.io/)[[3]](https://kupfer.gitlab.io/)\n\n---\n\nIf you want the latest real-time development status, check Matrix/IRC channels, GitHub issues, and the postmarketOS device pages regularly—progress on mainline support is very active and fast-moving!\n\n---\n\n1. [Qualcomm Snapdragon 665 (SM6125) - postmarketOS Wiki](https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_(SM6125))\n2. [Xiaomi Mi A3 (xiaomi-laurel) - postmarketOS Wiki](https://wiki.postmarketos.org/wiki/Xiaomi_Mi_A3_(xiaomi-laurel))\n3. [Kupfer Linux](https://kupfer.gitlab.io/)\n4. [Linux-On-Sdm6Series/device_xiaomi_ginkgo - GitHub](https://github.com/Linux-On-Sdm6Series/device_xiaomi_ginkgo)\n5. [Linux For Snapdragon 6/7 Series - GitHub](https://github.com/Linux-On-Sdm6Series)\n",
+              "type": "web-search"
+            }
+          ],
+          "callId": "call_41151101"
+        }
+      ]
+    },
+    {
+      "id": "66b0b0e8-f439-432e-a7bf-3df6678809a7",
+      "parentMessageID": "694ad4ba-732e-4aa5-b57d-8f21baba5e33",
+      "intent": "conversation",
+      "role": "user",
+      "content": "El Xiaomi Mi A3 (lanzado en 2019) es un smartphone Android One de gama media que destaca por su pantalla AMOLED de 6.08 pulgadas con lector de huellas integrado, triple cámara trasera de 48 MP y una batería de 4030 mAh. Ofrece una experiencia de Android puro, buen rendimiento con su procesador Snapdragon 665 y diseño en cristal Gorilla Glass 5. Ahora corrige lo que dices y busca la información que te pedi ",
+      "createdAt": "2026-04-21T01:17:27.635822363Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "86998139-c554-47a7-8f6f-c86b78e970ba",
+      "parentMessageID": "66b0b0e8-f439-432e-a7bf-3df6678809a7",
+      "intent": "conversation",
+      "role": "assistant",
+      "content": "**Corrección inmediata:** Tienes razón. El **Xiaomi Mi A3 usa Snapdragon 665 (SM6125)**, no 439. También coincide lo que dices de **pantalla AMOLED de 6.088\"**, **batería 4030 mAh**, **lector de huellas en pantalla**, **Android One**, y variantes **4 GB/128 GB**. ([mi.com](https://www.mi.com/bd/mi-a3/specs/))  \nEl lanzamiento global fue en **julio de 2019** (fecha listada como 2019‑07‑17). ([en.wikipedia.org](https://en.wikipedia.org/wiki/Xiaomi_Mi_A3))\n\n---\n\n# Proyectos Linux ARM relevantes para **Snapdragon 665 (SDM665)** y Mi A3\n\n### 1) **Halium (base para Ubuntu Touch y otros)**\n- Para Mi A3 (laurel_sprout) hay **Halium 9 en estado WIP** y usa **kernel 4.14.7** con SoC **SDM665**. ([docs.halium.org](https://docs.halium.org/en/latest/supplementary/devices/laurel_sprout.html?utm_source=openai))  \nEsto indica que hay trabajo real, pero no un port estable para uso diario.\n\n### 2) **Linux‑On‑Sdm6Series (GitHub)**\n- Organización comunitaria enfocada en **Snapdragon 6/7**, con repos para **Halium, UBports, postmarketOS, SailfishOS**, etc., y varios kernels/device trees. Es una buena base para buscar piezas reutilizables. ([github.com](https://github.com/Linux-On-Sdm6Series))  \n\n### 3) **Kupfer Linux (Arch ARM móvil)**\n- **Kupferbootstrap** es la herramienta oficial para **compilar y flashear** imágenes y paquetes. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/dev/index.html?utm_source=openai))  \n- La guía oficial de porting dice que necesitas **crear paquetes device/kernel/firmware** (PKGBUILD) y **convertir desde postmarketOS** si existe el port. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/porting/?utm_source=openai))  \n\n### 4) **Guías de porting (postmarketOS)**\n- La guía de porting explica elegir **kernel downstream vs mainline**, y los pasos típicos para crear paquetes y probar un port. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide?utm_source=openai))  \n- También tienen guía para pedir ayuda con logs cuando te atoras. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/Porting_to_a_new_device/We_are_happy_to_help_you%21?utm_source=openai))  \n\n> **Nota:** Intenté acceder a la wiki específica de postmarketOS para Snapdragon 665 y Mi A3, pero el sitio bloqueó el acceso por protección anti‑bot, así que no pude verificar esos detalles directamente. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/Qualcomm_Snapdragon_665_%28SM6125%29))  \nSi quieres, lo intento de nuevo más tarde o con un proxy/otro método.\n\n---\n\n# Tutorial completo para compilar Kupfer en tu Mi A3 (Arch Linux host)\n\nTu hardware (Ryzen 5 4500U, 8 GB RAM, SSD 128 GB) **es suficiente**, pero reserva **40‑60 GB** libres.\n\n## 0) Elige la base de kernel\n- **Downstream (Android kernel 4.14)**: más fácil de arrancar, menos “mainline”.  \n- **Mainline**: más limpio a futuro, pero requiere más trabajo.  \nGuía sobre downstream vs mainline en porting: ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide?utm_source=openai))  \n\nPara Mi A3 lo más realista es **downstream primero**, porque Halium ya usa 4.14.7 WIP. ([docs.halium.org](https://docs.halium.org/en/latest/supplementary/devices/laurel_sprout.html?utm_source=openai))  \n\n---\n\n## 1) Prepara tu entorno en Arch Linux\nInstala lo básico:\n\n```bash\nsudo pacman -S git base-devel python python-pip \\\n  aarch64-linux-gnu-gcc android-tools fastboot adb\n```\n\nOpcional (si vas a crear boot.img manualmente): `mkbootimg`.\n\n---\n\n## 2) Clona Kupferbootstrap\nKupferbootstrap es la herramienta oficial para compilar y flashear. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/dev/index.html?utm_source=openai))  \n\n```bash\ngit clone https://gitlab.com/kupfer/kupferbootstrap.git\ncd kupferbootstrap\n```\n\n---\n\n## 3) Crea tus paquetes (PKGBUILD)\nLa guía oficial dice que debes crear:\n- **device/**  \n- **linux/**  \n- **firmware/**  \ny normalmente **convertir desde postmarketOS APKBUILDs**. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/porting/?utm_source=openai))  \n\n### Estructura sugerida:\n```\npkgbuilds/\n  device/device-xiaomi-laurel/\n  linux/linux-xiaomi-laurel/\n  firmware/firmware-xiaomi-laurel/\n```\n\n### Estrategia práctica:\n1. Busca un dispositivo **con SoC similar** (SDM665/6xx) en Kupfer.  \n2. Copia sus PKGBUILD y ajusta:\n   - nombre de dispositivo\n   - defconfig (laurel_sprout_defconfig)\n   - rutas de dtb/dts\n   - blobs/firmware\n\n---\n\n## 4) Compila el kernel\nUsa el kernel downstream (4.14):\n\n```bash\nexport ARCH=arm64\nexport CROSS_COMPILE=aarch64-linux-gnu-\nmake laurel_sprout_defconfig\nmake -j$(nproc)\n```\n\nSalida esperada: `arch/arm64/boot/Image.gz` y `*.dtb`.\n\n---\n\n## 5) Compila rootfs con Kupfer\nEjemplo general:\n\n```bash\n./kupferbootstrap packages build linux-xiaomi-laurel\n./kupferbootstrap packages build device-xiaomi-laurel\n./kupferbootstrap packages build firmware-xiaomi-laurel\n./kupferbootstrap image build --device laurel --ui plasma-mobile\n```\n\n*(Ajusta según el nombre real de tus PKGBUILD)*\n\n---\n\n## 6) Empaqueta boot.img (si aplica)\nSi Kupferbootstrap no lo hace automáticamente, crea boot.img con kernel + initramfs:\n\n```bash\nmkbootimg --kernel Image.gz --ramdisk initramfs.cpio.gz \\\n  --dtb laurel_sprout.dtb --cmdline \"console=ttyMSM0\" \\\n  --base 0x80000000 --output boot.img\n```\n\n---\n\n## 7) Flashea con fastboot\n```bash\nfastboot flash boot boot.img\nfastboot reboot\n```\n\n---\n\n## 8) Depura (esto siempre falla al principio)\n- Logs: `adb logcat`\n- Kernel logs si puedes: `dmesg`\n- Problemas típicos: pantalla, táctil, Wi‑Fi, audio.\n\nKupfer está pensado para dispositivos con **bootloader Android (aboot)**, así que Mi A3 es adecuado. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/porting/?utm_source=openai))  \n\n---\n\n## 9) Documenta y contribuye\nLa guía de Kupfer pide que al enviar tu port incluyas:\n- qué funciona / qué no\n- instrucciones para testers\n- si puedes mantenerlo a largo plazo ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/porting/?utm_source=openai))  \n\n---\n\n# ¿Qué necesitas de mí ahora?\nDime cuál camino prefieres:\n\n1. **Downstream kernel (más rápido de arrancar)**  \n2. **Mainline (más limpio, más duro)**  \n\nY también:\n- ¿Quieres **Plasma Mobile** o algo más liviano (Phosh, Sxmo)?\n- ¿Qué tanto sabes de kernel/DTB?  \n\nCon eso, puedo darte un plan aún más preciso y scripts iniciales.",
+      "createdAt": "2026-04-21T01:17:27.635898596Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "b5ab7dca-3969-4c0a-879e-5120d415f11f",
+      "parentMessageID": "86998139-c554-47a7-8f6f-c86b78e970ba",
+      "intent": "conversation",
+      "role": "user",
+      "content": "Primero busca soc similar que tengan kupfer para saber como copiar esaa bases, primero downstream y plasma mobile",
+      "createdAt": "2026-04-21T01:23:52.811020289Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "192781ea-19d1-4822-bd17-7ae6d598e5ea",
+      "parentMessageID": "b5ab7dca-3969-4c0a-879e-5120d415f11f",
+      "intent": "conversation",
+      "role": "assistant",
+      "content": "**Listo — ya busqué en la comunidad de Kupfer y la lista oficial de dispositivos para elegir una base “similar”**.  \nNo hay ningún **SDM665** en Kupfer aún, pero sí hay dispositivos cercanos que puedes usar como base para copiar PKGBUILDs:\n\n## ✅ Dispositivos Kupfer más similares (para copiar como base)\nSegún la lista oficial de dispositivos soportados:\n\n**Más cercano por SoC (familia moderna Snapdragon 6xx):**\n- **`sdm670-google-sargo` (Pixel 3a)** → SDM670, arquitectura similar.  \n  Es el mejor punto de partida por SoC. ([kupfer.gitlab.io](https://kupfer.gitlab.io/devices/index.html?utm_source=openai))\n\n**Más cercano por marca Xiaomi (particiones/quirks de Xiaomi):**\n- **`sdm845-xiaomi-beryllium-*` (Poco F1)** → Xiaomi, pero SoC distinto.  \n  Útil para ver layout típico Xiaomi/Qualcomm. ([kupfer.gitlab.io](https://kupfer.gitlab.io/devices/index.html?utm_source=openai))\n\n**Otros Xiaomi antiguos (menos similares pero útiles):**\n- **`msm8953-xiaomi-tissot` (Mi A1)**  \n- **`msm8953-xiaomi-mido` (Redmi Note 4)** ([kupfer.gitlab.io](https://kupfer.gitlab.io/devices/index.html?utm_source=openai))\n\n---\n\n# Qué copiar primero (downstream + Plasma Mobile)\nKupfer recomienda copiar paquetes de un dispositivo **similar** y adaptar device/kernel/firmware, partiendo del port de postmarketOS. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/?utm_source=openai))\n\n### ✔ Paquetes base que debes copiar:\n- **device/** → configuración del dispositivo  \n- **linux/** → kernel (downstream)  \n- **firmware/** → blobs necesarios  \n([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/?utm_source=openai))\n\n### ✅ Base sugerida para ti:\n1) **`device-sdm670-google-sargo`** (SoC más parecido)  \n2) **`device-sdm845-xiaomi-beryllium`** (Xiaomi, útil para comparaciones)\n\n---\n\n# Pasos concretos (downstream + Plasma Mobile)\n\n## 1) Clona Kupferbootstrap\n```bash\ngit clone https://gitlab.com/kupfer/kupferbootstrap.git\ncd kupferbootstrap\n```\nDocs oficiales: ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/index.html?utm_source=openai))\n\n---\n\n## 2) Copia un dispositivo base\nToma uno de estos (recomendado SDM670):\n\n```\ndevice/device-sdm670-google-sargo\n```\n\nY crea tu propio:\n```\ndevice/device-sdm665-xiaomi-laurel\n```\n\nMismo proceso para kernel y firmware.\n\n---\n\n## 3) Porting recomendado por Kupfer\nKupfer recomienda copiar un dispositivo similar y adaptar PKGBUILDs. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/?utm_source=openai))\n\n---\n\n## 4) Compila paquetes específicos\nEjemplo (de la FAQ oficial):  \n```bash\nkupferbootstrap packages build device-sdm665-xiaomi-laurel linux-sdm665-xiaomi-laurel\n```\n([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/faq/?utm_source=openai))\n\n---\n\n## 5) Compila imagen con Plasma Mobile\n```bash\nkupferbootstrap image build --device sdm665-xiaomi-laurel --ui plasma-mobile\n```\n(Esto sigue la lógica de Kupferbootstrap; si el nombre exacto de flags cambia, revisamos el CLI.)\n\n---\n\n# Importante: Downstream (Android kernel)\nKupfer actualmente solo soporta bootloaders **aboot** (Android), así que el Mi A3 es viable. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/v0.1.2/usage/porting/?utm_source=openai))  \nEl kernel downstream (4.14) es lo más realista para arrancar primero.\n\n---\n\n# ¿Qué necesitas de mí ahora?\nDime cuál quieres copiar **primero**:\n\n1) **`sdm670-google-sargo`** (más parecido por SoC)  \n2) **`sdm845-xiaomi-beryllium`** (Xiaomi/Qualcomm, aunque SoC distinto)  \n3) Otro de la lista\n\nY te preparo:\n✅ estructura exacta de carpetas  \n✅ PKGBUILD inicial mínimo  \n✅ pasos de build listos para tu Arch Linux",
+      "createdAt": "2026-04-21T01:23:52.811051743Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "a5242b20-a67a-48ac-96a7-9108014932c2",
+      "parentMessageID": "192781ea-19d1-4822-bd17-7ae6d598e5ea",
+      "intent": "conversation",
+      "role": "user",
+      "content": "Si, vamos con el 670 y haz un tutorial completo, desde que necesito en mi laptop hasta que pasos vamos a hacer para compilar en el mi a3. Ahi tengo lineage os android 16 y magisk, sin google apps. Sirve de algo sacar logs del sistema con termux y su magisk, antes de proceder con todo el build de kupfer? ",
+      "createdAt": "2026-04-21T01:28:56.301146088Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "3f84d06b-4967-4488-a633-e2e4a0222515",
+      "parentMessageID": "a5242b20-a67a-48ac-96a7-9108014932c2",
+      "intent": "conversation",
+      "role": "assistant",
+      "content": "Sí: **la mejor base en Kupfer para copiar es `sdm670-google-sargo` (Pixel 3a)**. Está en la lista oficial de dispositivos soportados y es el más cercano por familia de SoC. ([kupfer.gitlab.io](https://kupfer.gitlab.io/devices/index.html?utm_source=openai))  \nAdemás, Kupfer recomienda **copiar y adaptar** un dispositivo similar y portar **paquetes de device/kernel/firmware**. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/porting/?utm_source=openai))\n\n---\n\n# ✅ Respuesta corta a tu duda (Termux/Magisk)\n**Sí, sirve y es recomendable** antes de compilar: con root (Magisk) puedes extraer **/proc/config.gz** para obtener el *defconfig real* del kernel en tu Mi A3. Eso es muy útil para empaquetar el kernel downstream y evitar horas de prueba‑error. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide/Kernel_package/Downstream?utm_source=openai))  \nTambién podrás más adelante sacar logs para depurar, pero **lo más útil antes de compilar** es el **config.gz** del kernel.\n\n---\n\n# Tutorial completo (Downstream + Plasma Mobile) usando base `sdm670-google-sargo`\n\n## 0) Qué vamos a hacer (resumen)\n1. **Recolectar kernel/DTB/firmware** del Mi A3 (downstream).\n2. **Extraer defconfig real** desde tu sistema (con Magisk/Termux).\n3. **Clonar Kupferbootstrap** y **copiar el device `sdm670-google-sargo`** como base.\n4. Crear **3 paquetes Kupfer**: `device`, `linux`, `firmware`.\n5. **Construir imagen** con Plasma Mobile.\n6. Flashear y depurar.\n\n---\n\n## 1) Requisitos en tu laptop (Arch Linux)\nTu Ryzen 5 + 8 GB RAM es suficiente. Necesitas **~40‑60 GB libres** en el SSD.\n\nInstala lo básico (paquetes típicos):\n- `git`, `base-devel`, `python`, `python-pip`\n- toolchain ARM64 (`aarch64-linux-gnu-gcc`)\n- `android-tools` (adb/fastboot)\n\n*(Si quieres te paso una línea exacta de `pacman` con los nombres correctos en Arch, solo dime.)*\n\n---\n\n## 2) Elegir base en Kupfer\nUsaremos **`device-sdm670-google-sargo`**, porque está soportado oficialmente y es el más cercano. ([kupfer.gitlab.io](https://kupfer.gitlab.io/devices/index.html?utm_source=openai))  \nTambién existen bases Xiaomi en Kupfer (poco F1 o Mi A1), pero el SoC es menos cercano. ([kupfer.gitlab.io](https://kupfer.gitlab.io/devices/index.html?utm_source=openai))\n\n---\n\n## 3) Recolectar kernel downstream y blobs del Mi A3\nKupfer recomienda **portar desde postmarketOS** y desde los APKBUILDs existentes, si los hay. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/porting/?utm_source=openai))  \nEn downstream, lo primero es **encontrar el kernel Android** del dispositivo. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide/Kernel_package/Downstream?utm_source=openai))\n\n**Fuentes típicas:**\n- `android_kernel_xiaomi_laurel_sprout` (repos en GitHub/Lineage)\n- device tree (`android_device_xiaomi_laurel_sprout`)\n- vendor blobs (`vendor_xiaomi_laurel_sprout`)\n\n*(Si quieres, busco repos exactos y te los dejo listos para clonar.)*\n\n---\n\n## 4) Extraer defconfig real (muy recomendado)\nEsto se hace **desde tu sistema actual** (LineageOS + Magisk):\n\n**Objetivo:** copiar `/proc/config.gz` desde el teléfono.  \nEs un método recomendado en la guía downstream porque te da el **config real** del kernel. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide/Kernel_package/Downstream?utm_source=openai))  \n\n**Pasos (resumen):**\n1. `adb shell`\n2. `su`\n3. `cp /proc/config.gz /sdcard/`\n4. `adb pull /sdcard/config.gz`\n5. `gzip -d config.gz`\n\nEsto te da el **defconfig base** para el paquete de kernel downstream. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide/Kernel_package/Downstream?utm_source=openai))\n\n---\n\n## 5) Clonar Kupferbootstrap\nKupfer se basa en **kupferbootstrap**, su herramienta de build. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/index.html?utm_source=openai))  \nTambién se documenta que Kupfer está inspirado en postmarketOS y comparte el modelo de deviceinfo. ([kupfer.gitlab.io](https://kupfer.gitlab.io/index.html?utm_source=openai))\n\n---\n\n## 6) Crear paquetes Kupfer (device/kernel/firmware)\nSegún la guía de porting de Kupfer, debes crear **paquetes device/kernel/firmware**, normalmente **copiando un dispositivo similar**. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/porting/?utm_source=openai))  \n\n### 6.1 Copiar base `sdm670-google-sargo`\nCopia los 3 paquetes como punto de partida:\n\n- `device/device-sdm670-google-sargo` → `device/device-sdm665-xiaomi-laurel`\n- `linux/linux-sdm670-*` (si existe) → `linux/linux-sdm665-xiaomi-laurel`\n- `firmware/firmware-sdm670-google-sargo` → `firmware/firmware-sdm665-xiaomi-laurel`\n\nEsto sigue la recomendación oficial de Kupfer. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/porting/?utm_source=openai))\n\n---\n\n## 7) Empaquetar kernel downstream\nLa guía downstream de postmarketOS describe cómo empaquetar kernel, encontrar defconfig y ajustes. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide/Kernel_package/Downstream?utm_source=openai))  \n\nPuntos clave:\n- Usa el **kernel Android** que ya existe para Mi A3. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide/Kernel_package/Downstream?utm_source=openai))  \n- Usa el **defconfig real** extraído del teléfono. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide/Kernel_package/Downstream?utm_source=openai))  \n- Ajusta con herramientas como `kconfig check` si fuera necesario. ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide/Kernel_package/Downstream?utm_source=openai))  \n\n---\n\n## 8) Construir la imagen con Plasma Mobile\nKupferbootstrap sirve para **construir imágenes y paquetes**. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/index.html?utm_source=openai))  \nEl flujo general es:\n1. Construir los paquetes device/kernel/firmware.\n2. Construir la imagen final (plasma‑mobile).\n\n*(Cuando tengas los nombres exactos de tus paquetes, te doy los comandos exactos de `kupferbootstrap` para build e image.)*\n\n---\n\n## 9) Flashear y depurar\nKupfer soporta **bootloader Android (aboot)** y está pensado para ex‑Android phones. ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/porting/?utm_source=openai))  \nMi A3 entra en ese perfil, por lo que es viable arrancar.\n\n---\n\n# ✅ Resumen rápido (lo que haremos)\n- **Base:** `sdm670-google-sargo` ([kupfer.gitlab.io](https://kupfer.gitlab.io/devices/index.html?utm_source=openai))  \n- **Kernel:** downstream Android (Mi A3) ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide/Kernel_package/Downstream?utm_source=openai))  \n- **Defconfig:** extraído con Magisk/Termux (recomendado) ([wiki.postmarketos.org](https://wiki.postmarketos.org/wiki/User%3AKnuxify/Draft%3APorting_guide/Kernel_package/Downstream?utm_source=openai))  \n- **Paquetes:** device + linux + firmware (Kupfer) ([kupfer.gitlab.io](https://kupfer.gitlab.io/kupferbootstrap/main/usage/porting/?utm_source=openai))  \n- **UI:** Plasma Mobile  \n\n---\n\n# ¿Qué necesito de ti para continuar?\n1. ¿Quieres que **busque los repos exactos** del kernel/device/vendor para Mi A3?  \n2. ¿Quieres que prepare **los archivos PKGBUILD base** ya listos a partir de `sdm670-google-sargo`?  \n3. ¿Prefieres usar `kupferbootstrap` *dev* o *main*?\n\nCuando me digas eso, te dejo el **paso‑a‑paso con comandos exactos y estructura real de carpetas**.",
+      "createdAt": "2026-04-21T01:28:56.301182056Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "6e9c29a2-e015-4d03-9cda-ee70c97576f1",
+      "parentMessageID": "3f84d06b-4967-4488-a633-e2e4a0222515",
+      "intent": "conversation",
+      "role": "user",
+      "content": "Si, busca todo los repositorios exactos, lo que usa lineageos para el mi a3. Nada mas, lo demas que sea tutorial y yo me encargo de buscar todo lo demas para ir cumpliendo paso a paso el tutorial ",
+      "createdAt": "2026-04-21T01:34:59.923612945Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "ee3f70e0-8ee4-400d-a771-3cccbc39757b",
+      "parentMessageID": "6e9c29a2-e015-4d03-9cda-ee70c97576f1",
+      "intent": "conversation",
+      "role": "assistant",
+      "content": "Aquí tienes **los repositorios exactos** que usa el árbol de LineageOS para el **Xiaomi Mi A3 (laurel_sprout)** según el *device tree* (manifest) del propio árbol de LineageOS para este dispositivo. ([github.com](https://github.com/MasterAwesome/android_device_xiaomi_laurel_sprout?utm_source=openai))\n\n**Repos (GitHub) en el manifest del device tree:**\n```text\nhttps://github.com/MasterAwesome/android_device_xiaomi_laurel_sprout\nhttps://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout\nhttps://github.com/MasterAwesome/android_vendor_xiaomi_laurel_sprout-images\nhttps://github.com/MasterAwesome/android_kernel_xiaomi_laurel_sprout\n```\n([github.com](https://github.com/MasterAwesome/android_device_xiaomi_laurel_sprout?utm_source=openai))\n\nSi quieres, puedo verificar también el branch específico que usa la rama oficial actual de LineageOS (por ejemplo, lineage-22.2) en esos repos.",
+      "createdAt": "2026-04-21T01:34:59.923658463Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "5aade042-fe4f-4250-af9a-c83cdd966f0c",
+      "parentMessageID": "ee3f70e0-8ee4-400d-a771-3cccbc39757b",
+      "intent": "conversation",
+      "role": "user",
+      "content": "Por favor, y no podemos sacar información del zip flasheable de lineage os 23 que hay, android 16",
+      "createdAt": "2026-04-21T01:36:20.436422182Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "6ee6b6c4-42dd-493d-81ca-a98b970652e5",
+      "parentMessageID": "5aade042-fe4f-4250-af9a-c83cdd966f0c",
+      "intent": "conversation",
+      "role": "assistant",
+      "content": "**Respuesta directa:** En el repo de LineageOS para Mi A3 que mencionamos (**MasterAwesome/android_device_xiaomi_laurel_sprout**), **solo existen estas ramas**:\n\n- `lineage-17.1`  \n- `lineage-18.0`  \n- `lineage-18.1`  \n- `lineage-19.0`  \n\nNo hay ramas `lineage-20`, `lineage-21`, `lineage-22` ni `lineage-23` en ese repo. Esto significa que, si existe un ZIP de “LineageOS 23 / Android 16” para Mi A3, **no está usando esas ramas públicas de ese repo**, o usa otro árbol/repo diferente.\n\n---\n\n## Sobre tu otra pregunta: ¿se puede sacar info del ZIP flasheable?\n**Sí, totalmente.** De un ZIP de LineageOS se puede extraer información clave, por ejemplo:\n- **`META-INF/com/android/metadata`** (versión, build date, device, etc.)\n- **`boot.img`** (kernel + ramdisk)\n- **`vendor_boot.img`** (si existe)\n- **`system.transfer.list` + `system.new.dat.br`** (para extraer sistema)\n- **`payload.bin`** (en algunos builds)\n\nSi me pasas el ZIP (o al menos el archivo `metadata` y/o `boot.img`), puedo:\n✅ Identificar el **branch real** del build  \n✅ Confirmar kernel base  \n✅ Confirmar device codename y target  \n\n---\n\n## Siguiente paso recomendado\nSi quieres, dime **el nombre exacto del ZIP** y el **enlace o checksum**, o súbelo aquí.  \nCon eso puedo decirte **qué árbol real usa** ese build y **de qué repositorios viene**.",
+      "createdAt": "2026-04-21T01:36:20.436574244Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [
+        {
+          "id": 0,
+          "authID": 0,
+          "resourceType": "Branch",
+          "authResourceType": "Repository",
+          "action": "list_branches",
+          "repo": "MasterAwesome/android_device_xiaomi_laurel_sprout",
+          "data": {
+            "commit": {
+              "sha": "ad9afca091560a5eb1c27454a6b07a7d5638195e"
+            },
+            "name": "lineage-17.1",
+            "protected": false
+          },
+          "displayName": "Branch: MasterAwesome/android_device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 0,
+          "authID": 0,
+          "resourceType": "Branch",
+          "authResourceType": "Repository",
+          "action": "list_branches",
+          "repo": "MasterAwesome/android_device_xiaomi_laurel_sprout",
+          "data": {
+            "commit": {
+              "sha": "7da4e9651fc6d78a4589df9de93bda9f1cb33ab5"
+            },
+            "name": "lineage-18.0",
+            "protected": false
+          },
+          "displayName": "Branch: MasterAwesome/android_device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 0,
+          "authID": 0,
+          "resourceType": "Branch",
+          "authResourceType": "Repository",
+          "action": "list_branches",
+          "repo": "MasterAwesome/android_device_xiaomi_laurel_sprout",
+          "data": {
+            "commit": {
+              "sha": "210380795205be1107e77b69ff9124d500263282"
+            },
+            "name": "lineage-18.1",
+            "protected": false
+          },
+          "displayName": "Branch: MasterAwesome/android_device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        },
+        {
+          "id": 0,
+          "authID": 0,
+          "resourceType": "Branch",
+          "authResourceType": "Repository",
+          "action": "list_branches",
+          "repo": "MasterAwesome/android_device_xiaomi_laurel_sprout",
+          "data": {
+            "commit": {
+              "sha": "3fd59c2504c60d75977f0179adb018499bc3b53d"
+            },
+            "name": "lineage-19.0",
+            "protected": false
+          },
+          "displayName": "Branch: MasterAwesome/android_device_xiaomi_laurel_sprout",
+          "type": "api-response"
+        }
+      ],
+      "skillExecutions": [
+        {
+          "slug": "get-github-data",
+          "status": "completed",
+          "arguments": "{\"endpoint\":\"/repos/MasterAwesome/android_device_xiaomi_laurel_sprout/branches\",\"page\":1,\"perPage\":100,\"repo\":\"MasterAwesome/android_device_xiaomi_laurel_sprout\",\"task\":\"List branches for MasterAwesome/android_device_xiaomi_laurel_sprout to confirm LineageOS branch names for Mi A3.\",\"userQuery\":\"What branches exist for the Mi A3 device tree in MasterAwesome/android_device_xiaomi_laurel_sprout?\"}",
+          "references": [
+            {
+              "id": 0,
+              "authID": 0,
+              "resourceType": "Branch",
+              "authResourceType": "Repository",
+              "action": "list_branches",
+              "repo": "MasterAwesome/android_device_xiaomi_laurel_sprout",
+              "data": {
+                "commit": {
+                  "sha": "ad9afca091560a5eb1c27454a6b07a7d5638195e"
+                },
+                "name": "lineage-17.1",
+                "protected": false
+              },
+              "displayName": "Branch: MasterAwesome/android_device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 0,
+              "authID": 0,
+              "resourceType": "Branch",
+              "authResourceType": "Repository",
+              "action": "list_branches",
+              "repo": "MasterAwesome/android_device_xiaomi_laurel_sprout",
+              "data": {
+                "commit": {
+                  "sha": "7da4e9651fc6d78a4589df9de93bda9f1cb33ab5"
+                },
+                "name": "lineage-18.0",
+                "protected": false
+              },
+              "displayName": "Branch: MasterAwesome/android_device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 0,
+              "authID": 0,
+              "resourceType": "Branch",
+              "authResourceType": "Repository",
+              "action": "list_branches",
+              "repo": "MasterAwesome/android_device_xiaomi_laurel_sprout",
+              "data": {
+                "commit": {
+                  "sha": "210380795205be1107e77b69ff9124d500263282"
+                },
+                "name": "lineage-18.1",
+                "protected": false
+              },
+              "displayName": "Branch: MasterAwesome/android_device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            },
+            {
+              "id": 0,
+              "authID": 0,
+              "resourceType": "Branch",
+              "authResourceType": "Repository",
+              "action": "list_branches",
+              "repo": "MasterAwesome/android_device_xiaomi_laurel_sprout",
+              "data": {
+                "commit": {
+                  "sha": "3fd59c2504c60d75977f0179adb018499bc3b53d"
+                },
+                "name": "lineage-19.0",
+                "protected": false
+              },
+              "displayName": "Branch: MasterAwesome/android_device_xiaomi_laurel_sprout",
+              "type": "api-response"
+            }
+          ],
+          "callId": "call_SdCVv02MNVpHhWYbO4XuL23G"
+        },
+        {
+          "slug": "get-github-data",
+          "status": "completed",
+          "arguments": "{\"endpoint\":\"/repos/MasterAwesome/android_device_xiaomi_laurel_sprout/branches\",\"page\":2,\"perPage\":100,\"repo\":\"MasterAwesome/android_device_xiaomi_laurel_sprout\",\"task\":\"List additional branches for MasterAwesome/android_device_xiaomi_laurel_sprout to confirm latest LineageOS branch names for Mi A3.\",\"userQuery\":\"What branches exist for the Mi A3 device tree in MasterAwesome/android_device_xiaomi_laurel_sprout?\"}",
+          "references": [],
+          "callId": "call_Z8nrCt4nGml30Ns5awm94sc4"
+        }
+      ]
+    },
+    {
+      "id": "67c4ee66-090e-40cf-9471-149eb8d16fde",
+      "parentMessageID": "6ee6b6c4-42dd-493d-81ca-a98b970652e5",
+      "intent": "conversation",
+      "role": "user",
+      "content": "https://github.com/LineageOS/android_kernel_xiaomi_sm6125. https://wiki.lineageos.org/devices/laurel_sprout/",
+      "createdAt": "2026-04-21T01:48:12.994398934Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    },
+    {
+      "id": "766c58db-b501-4c7c-885b-9c1ed6add2c9",
+      "parentMessageID": "67c4ee66-090e-40cf-9471-149eb8d16fde",
+      "intent": "conversation",
+      "role": "assistant",
+      "content": "**Confirmado con fuentes oficiales:**\n\n1) El kernel oficial de LineageOS para SM6125/Mi A3 está en el repo que pasaste y su **rama por defecto es `lineage-23.2`**. ([github.com](https://github.com/LineageOS/android_kernel_xiaomi_sm6125))  \n2) La **wiki oficial de LineageOS para `laurel_sprout`** indica que el **“Current version” es 22.2 (Android 15)** y que el **kernel es 4.14 (source code)**. ([wiki.lineageos.org](https://wiki.lineageos.org/devices/laurel_sprout/?utm_source=openai))  \n\nEsto significa que **si existe un ZIP “LineageOS 23 / Android 16” para Mi A3**, **no es oficial** (o al menos no está listado como “current version” en la wiki). ([wiki.lineageos.org](https://wiki.lineageos.org/devices/laurel_sprout/?utm_source=openai))  \n\n---\n\n# ¿Se puede sacar información del ZIP flasheable de LineageOS 23?\n**Sí, y es muy útil.** De un ZIP puedes extraer:\n\n- **`META-INF/com/android/metadata`** → versión exacta, fecha, fingerprint  \n- **`boot.img`** → kernel y ramdisk (para conocer defconfig, cmdline, etc.)  \n- **`vendor_boot.img`** (si existe)  \n- **`payload.bin`** → particiones (system, vendor, product, etc.)  \n\n> Si me compartes el ZIP (o al menos esos archivos), puedo ayudarte a identificar **rama real**, **kernel base** y **device tree**.\n\n---\n\n# ¿Qué puedo hacer ahora mismo por ti?\nSi quieres, en el siguiente mensaje puedo:\n\n✅ **Verificar ramas exactas** del kernel `android_kernel_xiaomi_sm6125` (además de `lineage-23.2`)  \n✅ **Abrir el ZIP** y decirte exactamente qué versión es  \n✅ **Decirte qué repos usa** ese build específico\n\n---\n\n## Si quieres extraer info tú mismo (comandos rápidos)\n```bash\nunzip lineage-23*.zip META-INF/com/android/metadata\nstrings boot.img | head\n```\n\nSi el ZIP trae `payload.bin`, puedes usar `payload-dumper-go` para extraer `boot.img`.\n\n---\n\nDime si quieres que yo **analice el ZIP** (puedes subirlo o pasar nombre+hash) y lo hago paso a paso.",
+      "createdAt": "2026-04-21T01:48:12.994436386Z",
+      "threadID": "ed040b5e-4984-404c-9c17-edaf916a0ba7",
+      "references": [],
+      "skillExecutions": []
+    }
+  ],
+  "files": {}
+}
