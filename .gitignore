@@ -1,0 +1,50 @@
+# Binaries (keep original firmware files separately)
+*.zip.bak
+*.img.bak
+
+# Large extracted files (keep originals only)
+work/extracts/boot/kernel_decompressed
+work/extracts/boot/ramdisk.cpio
+
+# Compilation artifacts
+*.o
+*.ko
+*.so
+*.a
+
+# Build directories
+build/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+temp/
+
+# Compiled Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+
+# Local kernel source (will be cloned separately)
+linux/
+kernel/
+
+# Local device tree sources
+device_tree_sources/
+
+# Secrets
+.env
+secrets.txt
