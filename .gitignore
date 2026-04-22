@@ -48,3 +48,11 @@ device_tree_sources/
 # Secrets
 .env
 secrets.txt
+
+# Extracted firmware (proprietary - DO NOT COMMIT)
+firmware-extract/
+*.bin
+*.fw
+*.b00
+*.b01
+*.mdt

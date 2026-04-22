@@ -1,19 +1,28 @@
 _mode=cross
 pkgname=firmware-sdm670-xiaomi-laurel
-pkgver=0.1
+pkgver=23.0
 pkgrel=1
 _arches=specific
 arch=(aarch64)
 license=(custom:Proprietary)
 options=(!strip)
+
 source=(
-    firmware-manifest.txt
+    firmware/
+    image/
 )
+
 sha256sums=(
+    SKIP
     SKIP
 )
 
 package() {
-    install -Dm644 "$srcdir"/firmware-manifest.txt \
-        "$pkgdir"/usr/share/doc/$pkgname/firmware-manifest.txt
+    mkdir -p "$pkgdir"/lib/firmware/qcom/sdm670/laurel
+    
+    cp -r "$srcdir"/firmware/* "$pkgdir"/lib/firmware/qcom/sdm670/laurel/ 2>/dev/null || true
+    cp -r "$srcdir"/image/* "$pkgdir"/lib/firmware/qcom/sdm670/laurel/ 2>/dev/null || true
+    
+    install -Dm644 "$srcdir"/../firmware-manifest.txt \
+        "$pkgdir"/usr/share/doc/$pkgname/FIRMWARE_NOTES.txt
 }
