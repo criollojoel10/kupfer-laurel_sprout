@@ -1,0 +1,9 @@
+Placeholder firmware package for Xiaomi Mi A3 (laurel_sprout).
+
+Current status:
+- No extracted redistributable firmware payload committed yet.
+- Expected target path for GPU firmware: /lib/firmware/qcom/sdm670/laurel/a615_zap.mbn
+
+Next action:
+1) Extract required firmware blobs from a legal source (device dump or vendor package).
+2) Add blob files under this package and install them to /lib/firmware/.

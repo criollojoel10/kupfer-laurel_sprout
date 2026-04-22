@@ -1,0 +1,22 @@
+pkgbase = device-sdm670-xiaomi-laurel
+	pkgdesc = Xiaomi Mi A3
+	pkgver = 0.1
+	pkgrel = 1
+	arch = aarch64
+	license = MIT
+	makedepends = devicepkg-helpers
+	depends = device-sdm670-common
+	depends = firmware-sdm670-xiaomi-laurel
+	depends = meta-qbootctl
+	source = https://gitlab.com/postmarketOS/pmaports/-/raw/be110154ba203db01e58f87ee212657705abc129/device/testing/device-xiaomi-laurel/deviceinfo
+	source = xiaomi-laurel.conf
+	source = machine-info
+	source = rootston.ini
+	source = modules-initfs
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = device-sdm670-xiaomi-laurel
