@@ -1,0 +1,33 @@
+_mode=cross
+_nodeps=true
+pkgname=device-xiaomi-laurel
+pkgver=0.1
+pkgrel=1
+_arches=specific
+arch=(aarch64)
+license=(MIT)
+depends=(
+    boot-android-common
+)
+source=(
+    deviceinfo
+    machine-info
+    modules-initfs
+    rootston.ini
+    xiaomi-laurel.conf
+)
+sha256sums=(
+    SKIP
+    SKIP
+    SKIP
+    SKIP
+    SKIP
+)
+
+package() {
+    install -Dm644 deviceinfo "$pkgdir/etc/kupfer/deviceinfo"
+    install -Dm644 machine-info "$pkgdir/etc/machine-info"
+    install -Dm644 modules-initfs "$pkgdir/etc/kupfer/modules-initfs"
+    install -Dm644 rootston.ini "$pkgdir/etc/phosh/rootston.ini"
+    install -Dm644 xiaomi-laurel.conf "$pkgdir/etc/kupfer/mkinitcpio.conf.d/xiaomi-laurel.conf"
+}

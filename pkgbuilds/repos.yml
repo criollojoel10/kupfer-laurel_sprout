@@ -15,9 +15,13 @@ repos:
   device:
     options:
       SigLevel: Never
+    packages:
+      - device-xiaomi-laurel
   firmware:
     options:
       SigLevel: Never
+    packages:
+      - firmware-xiaomi-laurel
   linux:
     options:
       SigLevel: Never
