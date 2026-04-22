@@ -31,3 +31,9 @@ Crear el paquete `device` equivalente a postmarketOS y dejar listo el boot de pr
 ## Siguiente paso en la fase de desarrollo
 
 La próxima tarea real es convertir la referencia de postmarketOS en un PKGBUILD de `device` para Kupfer, y usarlo para preparar el primer `boot.img` de prueba.
+
+## Bloqueo actual
+
+- El paquete `firmware-xiaomi-laurel` está solo como esqueleto.
+- Aún falta identificar y copiar blobs reales desde el dispositivo o la ROM.
+- No hay firmware suficiente todavía para declarar el port listo.
